@@ -1,0 +1,25 @@
+name: Check
+
+on: pull_request
+
+jobs:
+  install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Eslint check
+        run: pnpm lint
+
+      - name: Prettier check
+        run: pnpm prettier -c
