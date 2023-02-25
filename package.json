@@ -29,6 +29,7 @@
     "@next/bundle-analyzer": "^13.2.1",
     "eslint-config-prettier": "^8.6.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "nextjs-bundle-analysis": "^0.4.0",
     "prettier": "^2.8.4"
   },
   "nextBundleAnalysis": {
