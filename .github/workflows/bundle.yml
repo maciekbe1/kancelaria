@@ -1,0 +1,32 @@
+name: "Next.js Bundle Analysis"
+
+on:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  analyze:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: pnpm/action-setup@v2
+        name: Install pnpm
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build project
+      - run: pnpm build
+
+      - name: Analyze bundle sizes
+        uses: transferwise/actions-next-bundle-analyzer@master
+        with:
+          workflow-id: bundle.yml
+          base-branch: main
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
