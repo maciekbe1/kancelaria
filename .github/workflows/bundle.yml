@@ -17,7 +17,12 @@ jobs:
           version: 7
           run_install: false
 
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build project
       - run: pnpm build
+
       - name: Analyze bundle sizes
         uses: transferwise/actions-next-bundle-analyzer@master
         with:
