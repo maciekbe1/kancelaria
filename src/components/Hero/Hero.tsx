@@ -9,7 +9,7 @@ export const Hero = () => {
       container
       sx={{
         position: `relative`,
-        height: "100vh",
+        height: "64vh",
         mb: 15,
         inset: 0,
       }}
@@ -17,8 +17,10 @@ export const Hero = () => {
       <Image
         src="/images/hero.jpg"
         alt=""
-        layout="fill"
-        objectFit="cover"
+        fill
+        style={{
+          objectFit: "cover",
+        }}
         priority
       />
       <Grid
