@@ -1,56 +1,42 @@
-import Grid from "@mui/material/Grid";
+import { Container } from "components/Container/Container";
 import Image from "next/image";
-import Typography from "@mui/material/Typography";
+import Link from "next/link";
+import { links } from "./constants";
 
 export const Hero = () => {
   return (
-    <Grid
-      component="section"
-      container
-      sx={{
-        position: `relative`,
-        height: "64vh",
-        mb: 15,
-        inset: 0,
-      }}
-    >
+    <div className="w-full h-[600px] flex justify-center items-center overflow-hidden relative bg-black -mt-14">
       <Image
+        alt="hero"
         src="/images/hero.jpg"
-        alt=""
+        sizes="(max-width: 768px) 100vw, 50vw"
         fill
-        style={{
-          objectFit: "cover",
-        }}
-        priority
+        className="object-cover opacity-60"
       />
-      <Grid
-        container
-        sx={{
-          position: "absolute",
-          inset: 0,
-          backgroundColor: "rgba(0,0,0, .7)",
-        }}
-      >
-        <Grid
-          container
-          item
-          flexDirection="column"
-          justifyContent="center"
-          alignItems="center"
-        >
-          <Typography
-            variant="h1"
-            align="center"
-            gutterBottom
-            sx={{
-              color: "white",
-              fontWeight: 600,
-            }}
-          >
-            Kancelarie radców prawnych
-          </Typography>
-        </Grid>
-      </Grid>
-    </Grid>
+      <Container>
+        <div className="w-full gap-1 text-white md:grid md:grid-cols-2">
+          <h1 className="py-4 font-serif font-bold text-center uppercase text-header-sm md:text-header-md xl:text-header-xl drop-shadow-lg">
+            <span className="py-1 text-gold">Kancelarie</span> radców prawnych
+          </h1>
+          <div className="justify-end hidden drop-shadow-lg md:flex">
+            <ul className="flex flex-col justify-center">
+              {links.map((link, index) => {
+                return (
+                  <li key={index}>
+                    <Link
+                      href={link.href}
+                      role="button"
+                      className="mb-2 btn btn-wide btn-sm hover:text-gold"
+                    >
+                      {link.text}
+                    </Link>
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+      </Container>
+    </div>
   );
 };
