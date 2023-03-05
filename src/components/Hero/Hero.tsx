@@ -1,4 +1,4 @@
-import { Container } from "components/Container/Container";
+import { Container } from "components";
 import Image from "next/image";
 import Link from "next/link";
 import { links } from "./constants";
@@ -19,21 +19,20 @@ export const Hero = () => {
             <span className="py-1 text-gold">Kancelarie</span> radców prawnych
           </h1>
           <div className="justify-end hidden drop-shadow-lg md:flex">
-            <ul className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center">
               {links.map((link, index) => {
                 return (
-                  <li key={index}>
-                    <Link
-                      href={link.href}
-                      role="button"
-                      className="mb-2 btn btn-wide btn-sm hover:text-gold"
-                    >
-                      {link.text}
-                    </Link>
-                  </li>
+                  <Link
+                    key={index}
+                    href={link.href}
+                    role="button"
+                    className="mb-2 xl:mb-3 btn btn-wide btn-sm xl:btn-md hover:text-gold last:mb-0"
+                  >
+                    {link.text}
+                  </Link>
                 );
               })}
-            </ul>
+            </div>
           </div>
         </div>
       </Container>

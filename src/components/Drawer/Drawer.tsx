@@ -1,3 +1,6 @@
+import Icon from "@mdi/react";
+import { mdiClose } from "@mdi/js";
+
 type DrawerProps = {
   children: React.ReactElement;
   isOpen: boolean;
@@ -6,7 +9,7 @@ type DrawerProps = {
 
 export const Drawer = ({ children, isOpen, onClose }: DrawerProps) => {
   return (
-    <main
+    <div
       className={
         "fixed overflow-hidden z-10 bg-gray-900 bg-opacity-25 inset-0 transform ease-in-out" +
         (isOpen
@@ -21,14 +24,18 @@ export const Drawer = ({ children, isOpen, onClose }: DrawerProps) => {
         }
       >
         <article className="relative flex flex-col w-screen h-full max-w-lg pb-10 space-y-6 overflow-y-scroll">
-          <div className="p-4 text-lg font-bold">Header</div>
-          {children}
+          <div className="flex justify-end p-4">
+            <button onClick={onClose}>
+              <Icon path={mdiClose} size={1} />
+            </button>
+          </div>
+          <div className="p-4">{children}</div>
         </article>
       </section>
       <section
         className="w-screen h-full cursor-pointer"
         onClick={onClose}
       ></section>
-    </main>
+    </div>
   );
 };

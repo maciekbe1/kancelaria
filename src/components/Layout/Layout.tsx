@@ -1,4 +1,4 @@
-import { Header } from "components";
+import { Footer, Header } from "components";
 
 type LayoutProps = {
   children: Array<React.ReactElement> | React.ReactElement;
@@ -8,7 +8,8 @@ export const Layout = ({ children }: LayoutProps) => {
   return (
     <>
       <Header />
-      {children}
+      <main>{children}</main>
+      <Footer />
     </>
   );
 };
