@@ -1,26 +1,28 @@
-import { Container } from "components";
+import { Container, Drawer } from "components";
 import Link from "next/link";
 import { useState } from "react";
-import { Drawer } from "../../Drawer/Drawer";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
-    <div className="bg-slate-800/50 w-full sticky top-0 z-30">
+    <div className="sticky top-0 z-30 w-full bg-slate-800/50">
       <Container>
         <div className="flex items-center justify-between mx-auto text-white">
           <Link href="/">Logo</Link>
           <div className="flex items-center space-x-1">
             <ul className="hidden space-x-2 md:inline-flex">
               <li>
-                <Link href="/" className="px-4 py-2 font-semibold rounded">
+                <Link
+                  href="/o-nas"
+                  className="px-4 py-2 font-semibold rounded hover:text-gold"
+                >
                   O nas
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/about"
-                  className="px-4 py-2 font-semibold text-white rounded"
+                  href="/specjalizacje"
+                  className="px-4 py-2 font-semibold text-white rounded hover:text-gold"
                 >
                   Specjalizacje
                 </Link>

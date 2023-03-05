@@ -4,7 +4,7 @@ import { contacts } from "./constants";
 
 export const TopBar = () => {
   return (
-    <div className="bg-slate-800 text-gray-300 hidden md:block">
+    <div className="hidden text-gray-300 bg-slate-800 md:block">
       <Container>
         <div className="flex">
           {contacts.map((contact, index) => (
@@ -12,7 +12,7 @@ export const TopBar = () => {
               <Icon path={contact.icon} size={1} />
               <a
                 href={`${contact.type}:${contact.value}`}
-                className="ml-2 hover:text-orange-600"
+                className="ml-2 hover:text-gold"
               >
                 {contact.value}
               </a>

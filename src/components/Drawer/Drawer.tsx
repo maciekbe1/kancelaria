@@ -20,8 +20,8 @@ export const Drawer = ({ children, isOpen, onClose }: DrawerProps) => {
           (isOpen ? " translate-x-0 " : " translate-x-full")
         }
       >
-        <article className="relative w-screen max-w-lg pb-10 flex flex-col space-y-6 overflow-y-scroll h-full">
-          <header className="p-4 font-bold text-lg">Header</header>
+        <article className="relative flex flex-col w-screen h-full max-w-lg pb-10 space-y-6 overflow-y-scroll">
+          <div className="p-4 text-lg font-bold">Header</div>
           {children}
         </article>
       </section>
