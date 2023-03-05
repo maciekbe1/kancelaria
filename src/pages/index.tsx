@@ -1,5 +1,5 @@
 import Head from "next/head";
-import { Hero } from "components";
+import { Container, Hero, AgentSection } from "components";
 
 export default function Home() {
   return (
@@ -11,6 +11,9 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Hero />
+      <Container>
+        <AgentSection />
+      </Container>
     </>
   );
 }

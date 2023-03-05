@@ -1,20 +1,35 @@
+import clsx from "clsx";
 import { Container, Drawer } from "components";
+import { links } from "components/Hero/constants";
+import useHeaderState from "hooks/useHeaderState";
 import Link from "next/link";
 import { useState } from "react";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const { isViewportScrolled } = useHeaderState();
+
   return (
-    <div className="sticky top-0 z-30 w-full bg-slate-800/50">
+    <div
+      className={clsx(
+        "sticky top-0 z-30 w-full",
+        isViewportScrolled ? "bg-slate-200/90" : "bg-slate-800/50"
+      )}
+    >
       <Container>
-        <div className="flex items-center justify-between mx-auto text-white">
+        <div
+          className={clsx(
+            "flex items-center justify-between mx-auto",
+            isViewportScrolled ? "text-slate-900" : "text-white"
+          )}
+        >
           <Link href="/">Logo</Link>
           <div className="flex items-center space-x-1">
             <ul className="hidden space-x-2 md:inline-flex">
               <li>
                 <Link
                   href="/o-nas"
-                  className="px-4 py-2 font-semibold rounded hover:text-gold"
+                  className="px-4 py-2 font-semibold hover:text-gold"
                 >
                   O nas
                 </Link>
@@ -22,7 +37,7 @@ export const NavBar = () => {
               <li>
                 <Link
                   href="/specjalizacje"
-                  className="px-4 py-2 font-semibold text-white rounded hover:text-gold"
+                  className="px-4 py-2 font-semibold hover:text-gold"
                 >
                   Specjalizacje
                 </Link>
@@ -53,9 +68,21 @@ export const NavBar = () => {
         </div>
       </Container>
       <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <ul>
-          <li>hello</li>
-          <li>hi</li>
+        <ul className="flex flex-col">
+          <Link className="btn btn-link text-gold" href="/o-nas">
+            O nas
+          </Link>
+          {links.map((link, index) => {
+            return (
+              <Link
+                key={index}
+                className="btn btn-link text-gold"
+                href={link.href}
+              >
+                {link.text}
+              </Link>
+            );
+          })}
         </ul>
       </Drawer>
     </div>

@@ -1,9 +1,10 @@
 import { mdiPhone, mdiEmailOutline } from "@mdi/js";
+import { phoneNumber } from "../../../constants";
 
 export const contacts = [
   {
     type: "tel",
-    value: "+48 662 232 232",
+    value: phoneNumber,
     icon: mdiPhone,
   },
   {
