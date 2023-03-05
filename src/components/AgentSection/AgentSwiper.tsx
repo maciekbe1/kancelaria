@@ -5,6 +5,7 @@ import { agents } from "./constants";
 import Icon from "@mdi/react";
 import { mdiImageOffOutline } from "@mdi/js";
 import clsx from "clsx";
+import Link from "next/link";
 
 type AgentSwiperProps = {
   className?: string;
@@ -30,12 +31,19 @@ export const AgentSwiper = ({ className }: AgentSwiperProps) => {
           return (
             <SwiperSlide key={index}>
               <div className="grid grid-cols-2 gap-1">
-                <div className="mt-36">
-                  <p className="mb-4 text-2xl uppercase text-gold">
-                    Radca prawny
-                  </p>
-                  <h3 className="mb-6 font-serif text-6xl">{agent.name}</h3>
-                  {agent.description}
+                <div className="flex flex-col justify-between mt-36">
+                  <div>
+                    <p className="mb-4 text-2xl uppercase text-gold">
+                      Radca prawny
+                    </p>
+                    <h3 className="mb-6 font-serif text-6xl">{agent.name}</h3>
+                    <p>{agent.description}</p>
+                  </div>
+                  <div>
+                    <Link className="mb-6 btn btn-outline btn-md" href="/">
+                      Zobacz więcej
+                    </Link>
+                  </div>
                 </div>
                 <div className="flex justify-end">
                   {agent.image ? (
