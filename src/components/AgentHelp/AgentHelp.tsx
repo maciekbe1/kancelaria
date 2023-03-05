@@ -3,7 +3,7 @@ import React from "react";
 
 export const AgentHelp = () => {
   return (
-    <div className="flex flex-col-reverse mt-6 mb-10 md:mt-24 md:gap-1 md:grid-cols-2 md:grid">
+    <div className="flex flex-col-reverse my-6 md:my-24 md:gap-1 md:grid-cols-2 md:grid">
       <div>
         <Image
           alt="biuro"
