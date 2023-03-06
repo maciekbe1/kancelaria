@@ -11,7 +11,7 @@ export const Hero = () => {
         src="/images/hero.jpg"
         sizes="(max-width: 768px) 100vw, 50vw"
         fill
-        className="object-cover opacity-60"
+        className="object-cover"
       />
       <Container>
         <div className="w-full gap-1 text-white md:grid md:grid-cols-2">
