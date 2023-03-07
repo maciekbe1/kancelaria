@@ -1,7 +1,8 @@
 import cslx from "clsx";
+import { ReactNode } from "react";
 
 type ContainerProps = {
-  children: Array<React.ReactElement> | React.ReactElement | string;
+  children: ReactNode;
   className?: string;
 };
 const classes = {

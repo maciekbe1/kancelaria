@@ -1,7 +1,14 @@
 import Head from "next/head";
-import { Container, Hero, AgentSection } from "components";
+import { Container, Hero, ServicesSection } from "components";
+import useHeaderState from "hooks/useHeaderState";
+import dynamic from "next/dynamic";
 
+const AgentSwiper = dynamic(() =>
+  import("components").then((module) => module.AgentSwiper)
+);
 export default function Home() {
+  const { isMobile } = useHeaderState();
+
   return (
     <>
       <Head>
@@ -12,7 +19,8 @@ export default function Home() {
       </Head>
       <Hero />
       <Container>
-        <AgentSection />
+        {!isMobile && <AgentSwiper className="hidden sm:block" />}
+        <ServicesSection />
       </Container>
     </>
   );
