@@ -8,7 +8,7 @@ export const agents = [
   },
   {
     name: "Łukasz Zabłocki",
-    image: "",
+    image: "/images/Lukasz-Zablocki.jpg",
     description:
       "Członek Okręgowej Izby Radców Prawnych w Gdańsku. Doświadczenie zawodowe zdobywał w renomowanych trójmiejskich kancelariach prawnych w tym w jednej z największych kancelarii w Polsce zajmującej się tematyką prawa restrukturyzacyjnego i upadłościowego. Odbył półroczne studia na Universitat de València w Hiszpanii w ramach programu ERASMUS. Ekspert prawa restrukturyzacyjnego i upadłościowego, prawa cywilnego, gospodarczego oraz prawa pracy.",
     spec: "Radca prawny",
