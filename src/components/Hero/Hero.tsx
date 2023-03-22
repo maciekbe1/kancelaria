@@ -43,7 +43,7 @@ export const Hero = () => {
                       className="mb-2 md:mb-3 last:mb-0"
                     >
                       <Link
-                        href={link.href}
+                        href={`/specjalizacje#${link.id}`}
                         role="button"
                         className="btn btn-wide btn-sm md:btn-md hover:text-gold"
                       >

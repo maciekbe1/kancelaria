@@ -79,7 +79,7 @@ export const NavBar = () => {
               <Link
                 key={index}
                 className="btn btn-link text-gold"
-                href={link.href}
+                href={`/specjalizacje#${link.id}`}
               >
                 {link.text}
               </Link>
