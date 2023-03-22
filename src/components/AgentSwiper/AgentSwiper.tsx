@@ -4,17 +4,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { agents } from "./constants";
 import Icon from "@mdi/react";
 import { mdiImageOffOutline } from "@mdi/js";
-import clsx from "clsx";
 import Link from "next/link";
 import { domAnimation, LazyMotion, m } from "framer-motion";
 
-type AgentSwiperProps = {
-  className?: string;
-};
-
-export const AgentSwiper = ({ className }: AgentSwiperProps) => {
+export const AgentSwiper = () => {
   return (
-    <div className={clsx("relative z-20 -mt-32", className)}>
+    <div className="relative z-20 hidden -mt-32 sm:block">
       <Swiper
         modules={[A11y, Navigation, Autoplay]}
         loop={true}
@@ -45,10 +40,13 @@ export const AgentSwiper = ({ className }: AgentSwiperProps) => {
                         {agent.spec}
                       </p>
                       <h3 className="mb-6 font-serif text-6xl">{agent.name}</h3>
-                      <p>{agent.description}</p>
+                      <p>{agent.description[0]}</p>
                     </div>
                     <div>
-                      <Link className="mb-6 btn btn-outline btn-md" href="/">
+                      <Link
+                        className="mb-6 btn btn-outline btn-md"
+                        href={`/about#${agent.id}`}
+                      >
                         Zobacz więcej
                       </Link>
                     </div>

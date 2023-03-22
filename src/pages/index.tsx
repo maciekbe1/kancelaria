@@ -5,6 +5,7 @@ import dynamic from "next/dynamic";
 const AgentSwiper = dynamic(() =>
   import("components").then((module) => module.AgentSwiper)
 );
+
 export default function Home() {
   const { isMobile } = useHeaderState();
 
@@ -12,7 +13,7 @@ export default function Home() {
     <>
       <Hero />
       <Container>
-        {!isMobile && <AgentSwiper className="hidden sm:block" />}
+        {!isMobile && <AgentSwiper />}
         <ServicesSection />
       </Container>
     </>
