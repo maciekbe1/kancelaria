@@ -8,3 +8,4 @@ export * from "./Footer/Footer";
 export * from "./AgentSwiper/AgentSwiper";
 export * from "./ServicesSection/ServicesSection";
 export * from "./AgentCart/AgentCart";
+export * from "./Specializations/restrukturyzacje";

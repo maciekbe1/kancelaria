@@ -1,5 +1,5 @@
 import { Container } from "components";
-import { Restrukturyzacje } from "components/Specializations/restrukturyzacje";
+import { Restrukturyzacje } from "components";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
