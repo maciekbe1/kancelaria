@@ -1,7 +1,7 @@
 import Balancer from "react-wrap-balancer";
 import { LogoIcon } from "icons/LogoIcon";
 
-export const Restrukturyzacje = () => {
+export const Restructuring = () => {
   return (
     <>
       <h2 className="my-8 font-serif text-3xl text-center lg:text-5xl">

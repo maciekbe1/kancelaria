@@ -1,5 +1,5 @@
 import { Container } from "components";
-import { Restrukturyzacje } from "components";
+import { Restructuring } from "components";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
@@ -28,7 +28,7 @@ const Specializations = () => {
         </Container>
       </div>
       <Container>
-        <Restrukturyzacje />
+        <Restructuring />
       </Container>
     </>
   );
