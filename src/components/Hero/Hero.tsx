@@ -9,7 +9,7 @@ export const Hero = () => {
     <div className="w-full h-[600px] lg:h-[740px] flex justify-center items-center overflow-hidden relative -mt-[86px]">
       <Image
         alt="hero"
-        src="/images/hero.jpg"
+        src="/images/home.jpg"
         fill
         className="object-cover"
         priority
@@ -43,7 +43,7 @@ export const Hero = () => {
                       className="mb-2 md:mb-3 last:mb-0"
                     >
                       <Link
-                        href={link.href}
+                        href={`/specjalizacje#${link.id}`}
                         role="button"
                         className="btn btn-wide btn-sm md:btn-md hover:text-gold"
                       >

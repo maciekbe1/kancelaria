@@ -45,7 +45,7 @@ export const AgentSwiper = () => {
                     <div>
                       <Link
                         className="mb-6 btn btn-outline btn-md"
-                        href={`/about#${agent.id}`}
+                        href={`/zespol#${agent.id}`}
                       >
                         Zobacz więcej
                       </Link>
