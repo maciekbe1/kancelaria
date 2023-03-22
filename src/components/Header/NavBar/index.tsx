@@ -71,7 +71,11 @@ export const NavBar = () => {
       </Container>
       <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <ul className="flex flex-col">
-          <Link className="btn btn-link text-gold" href="/zespol">
+          <Link
+            className="btn btn-link text-gold"
+            href="/zespol"
+            onClick={() => setIsOpen(false)}
+          >
             Zespół Kancelarii
           </Link>
           {links.map((link, index) => {
@@ -80,6 +84,7 @@ export const NavBar = () => {
                 key={index}
                 className="btn btn-link text-gold"
                 href={`/specjalizacje#${link.id}`}
+                onClick={() => setIsOpen(false)}
               >
                 {link.text}
               </Link>

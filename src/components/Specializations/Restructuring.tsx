@@ -4,7 +4,7 @@ import { LogoIcon } from "icons/LogoIcon";
 export const Restructuring = () => {
   return (
     <>
-      <h2 className="my-8 font-serif text-3xl text-center lg:text-5xl">
+      <h2 className="my-8 font-serif text-xl text-center md:text-3xl lg:text-5xl">
         <Balancer>
           POSTĘPOWANIA RESTRUKTURYZACYJNE I UPADŁOŚCIOWE - TO NASZA GŁÓWNA
           SPECJALIZACJA
