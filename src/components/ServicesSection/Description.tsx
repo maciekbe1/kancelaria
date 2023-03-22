@@ -54,7 +54,7 @@ export const Description = () => {
         <br />
         <p className="font-bold">
           Dzięki doświadczeniu i indywidualnemu podejściu do każdej sprawy
-          doprowadziliśmy do zawarcia wielu układów w postępowaniach
+          doprowadziliśmy do zawarcia kilkudziesięciu układów w postępowaniach
           restrukturyzacyjnych.{" "}
         </p>
         <br />

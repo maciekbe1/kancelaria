@@ -1,10 +1,14 @@
-import { Lora, Open_Sans } from "next/font/google";
+import { Lora, Open_Sans, Domine } from "next/font/google";
 
 const lora = Lora({
   subsets: ["latin"],
 });
 const openSans = Open_Sans({
   subsets: ["latin"],
+});
+const domine = Domine({
+  subsets: ["latin"],
+  weight: "400",
 });
 
 export const Styles = () => {
@@ -14,6 +18,7 @@ export const Styles = () => {
         :root {
           --lora-font: ${lora.style.fontFamily};
           --open-sans-font: ${openSans.style.fontFamily};
+          --domine-font: ${domine.style.fontFamily};
         }
       `}
     </style>
