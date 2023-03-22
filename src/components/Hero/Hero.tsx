@@ -9,7 +9,7 @@ export const Hero = () => {
     <div className="w-full h-[600px] lg:h-[740px] flex justify-center items-center overflow-hidden relative -mt-[86px]">
       <Image
         alt="hero"
-        src="/images/hero.jpg"
+        src="/images/home.jpg"
         fill
         className="object-cover"
         priority
