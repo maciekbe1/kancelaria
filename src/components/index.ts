@@ -7,3 +7,4 @@ export * from "./Styles/Styles";
 export * from "./Footer/Footer";
 export * from "./AgentSwiper/AgentSwiper";
 export * from "./ServicesSection/ServicesSection";
+export * from "./AgentCart/AgentCart";

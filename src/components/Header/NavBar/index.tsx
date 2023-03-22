@@ -30,10 +30,10 @@ export const NavBar = () => {
           <ul className="hidden space-x-2 md:inline-flex">
             <li>
               <Link
-                href="/o-nas"
+                href="/about"
                 className="px-4 py-2 font-semibold hover:text-gold"
               >
-                O nas
+                Zespół Kancelarii
               </Link>
             </li>
             <li>
@@ -71,8 +71,8 @@ export const NavBar = () => {
       </Container>
       <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
         <ul className="flex flex-col">
-          <Link className="btn btn-link text-gold" href="/o-nas">
-            O nas
+          <Link className="btn btn-link text-gold" href="/about">
+            Zespół Kancelarii
           </Link>
           {links.map((link, index) => {
             return (

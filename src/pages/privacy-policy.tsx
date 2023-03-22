@@ -14,7 +14,7 @@ const PrivacyPolicy = () => {
           priority
           quality={100}
         />
-        <Container className="w-full p-0 text-white">
+        <Container className="p-0 text-white">
           <motion.h1
             initial={{ opacity: 0, y: 55 }}
             animate={{ opacity: 1, y: 0 }}
