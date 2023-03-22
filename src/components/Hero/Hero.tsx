@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export const Hero = () => {
   return (
-    <div className="w-full h-[600px] lg:h-[740px] flex justify-center items-center overflow-hidden relative bg-black -mt-[86px]">
+    <div className="w-full h-[600px] lg:h-[740px] flex justify-center items-center overflow-hidden relative -mt-[86px]">
       <Image
         alt="hero"
         src="/images/hero.jpg"
@@ -15,7 +15,7 @@ export const Hero = () => {
         priority
         quality={100}
       />
-      <Container>
+      <Container className="xs:px-0">
         <div className="w-full gap-1 text-white md:grid md:grid-cols-2">
           <div>
             <motion.h1

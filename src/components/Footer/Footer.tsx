@@ -24,7 +24,7 @@ export const Footer = () => {
         <ul className="flex flex-wrap items-center mt-3 sm:mt-0">
           <li>
             <Link
-              href="/polityka-prywatności"
+              href="/privacy-policy"
               className="mr-4 text-sm font-semibold text-gray-300 hover:text-gold md:mr-6 dark:text-gray-400"
             >
               Polityka prywatności

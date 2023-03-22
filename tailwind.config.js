@@ -17,6 +17,9 @@ module.exports = {
         current: "current",
         gold: "#D4AF37",
       },
+      screens: {
+        xs: { max: "639px" },
+      },
     },
   },
   content: [

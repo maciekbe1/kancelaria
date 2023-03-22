@@ -13,7 +13,7 @@ export const NavBar = () => {
   return (
     <div
       className={clsx(
-        "sticky top-0 z-30 w-full",
+        "sticky top-0 z-30 w-full border-b-2 border-gold -mt-1",
         isViewportScrolled ? "bg-slate-200/90" : "bg-slate-800/50"
       )}
     >

@@ -14,7 +14,7 @@ function useHeaderState() {
   };
 
   const detectScroll = () => {
-    if (window.scrollY > 60) setViewportScrolled(true);
+    if (window.scrollY > 56) setViewportScrolled(true);
     else setViewportScrolled(false);
   };
 
