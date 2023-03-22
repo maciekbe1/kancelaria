@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export const Hero = () => {
   return (
-    <div className="w-full h-[600px] lg:h-[740px] flex justify-center items-center overflow-hidden relative bg-black -mt-14">
+    <div className="w-full h-[600px] lg:h-[740px] flex justify-center items-center overflow-hidden relative bg-black -mt-[86px]">
       <Image
         alt="hero"
         src="/images/hero.jpg"
@@ -17,15 +17,18 @@ export const Hero = () => {
       />
       <Container>
         <div className="w-full gap-1 text-white md:grid md:grid-cols-2">
-          <motion.h1
-            initial={{ opacity: 0, y: 55 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: 55 }}
-            transition={{ delay: 0.55, duration: 1 }}
-            className="py-4 font-serif font-bold text-center uppercase text-header-md lg:text-header-xl drop-shadow-lg"
-          >
-            <span className="py-1 text-gold">Kancelarie</span> radców prawnych
-          </motion.h1>
+          <div>
+            <motion.h1
+              initial={{ opacity: 0, y: 55 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 55 }}
+              transition={{ delay: 0.55, duration: 1 }}
+              className="py-4 font-domine font-bold text-center uppercase text-header-md lg:text-header-xl drop-shadow-lg bg-slate-600-500/[.7] hero-text bg-gradient-to-l from-slate-700"
+            >
+              <span className="py-1 text-gold">Kancelarie</span> radców prawnych
+            </motion.h1>
+          </div>
+
           <div className="justify-end hidden drop-shadow-lg md:flex">
             <ul className="flex flex-col justify-center">
               <AnimatePresence>
