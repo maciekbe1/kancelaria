@@ -4,7 +4,7 @@ import { links } from "components/Hero/constants";
 import useHeaderState from "hooks/useHeaderState";
 import Link from "next/link";
 import { useState } from "react";
-import { LogoIcon } from "Icons/LogoIcon";
+import { LogoIcon } from "icons/LogoIcon";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
