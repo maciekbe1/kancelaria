@@ -15,15 +15,17 @@ const PrivacyPolicy = () => {
           quality={100}
         />
         <Container className="xs:p-0">
-          <motion.h1
+          <motion.div
             initial={{ opacity: 0, y: 55 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 55 }}
             transition={{ delay: 0.55, duration: 1 }}
-            className="py-4 font-domine font-bold text-center uppercase text-header-sm lg:text-header-xl drop-shadow-lg bg-slate-600-500/[.7] bg-gradient-to-l from-slate-700 text-white"
+            className="drop-shadow-lg bg-gradient-to-l from-slate-700"
           >
-            <span className="py-1 text-gold">Polityka</span> prywatności
-          </motion.h1>
+            <h1 className="py-4 font-bold text-center text-white uppercase font-domine text-header-sm lg:text-header-xl">
+              <span className="py-1 text-gold">Polityka</span> prywatności
+            </h1>
+          </motion.div>
         </Container>
       </div>
       <Container className="py-10">
