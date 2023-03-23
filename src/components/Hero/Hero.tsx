@@ -17,17 +17,17 @@ export const Hero = () => {
       />
       <Container className="xs:px-0">
         <div className="w-full gap-1 text-white md:grid md:grid-cols-2">
-          <div>
-            <motion.h1
-              initial={{ opacity: 0, y: 55 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 55 }}
-              transition={{ delay: 0.55, duration: 1 }}
-              className="py-4 font-domine font-bold text-center uppercase text-header-md lg:text-header-xl drop-shadow-lg bg-slate-600-500/[.7] hero-text bg-gradient-to-l from-slate-700"
-            >
+          <motion.div
+            initial={{ opacity: 0, y: 55 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 55 }}
+            transition={{ delay: 0.55, duration: 1 }}
+            className="bg-gradient-to-l from-slate-700 drop-shadow-lg h-max"
+          >
+            <h1 className="py-4 font-bold text-center uppercase font-domine text-header-md lg:text-header-xl">
               <span className="py-1 text-gold">Kancelarie</span> radców prawnych
-            </motion.h1>
-          </div>
+            </h1>
+          </motion.div>
 
           <div className="justify-end hidden drop-shadow-lg md:flex">
             <ul className="flex flex-col justify-center">
