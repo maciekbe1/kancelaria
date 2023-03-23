@@ -47,7 +47,7 @@ export const NavBar = () => {
           </ul>
           <div className="inline-flex md:hidden">
             <button
-              className="flex-none px-2 drawer-content"
+              className="flex-none drawer-content"
               onClick={() => setIsOpen(true)}
             >
               <svg
@@ -90,6 +90,13 @@ export const NavBar = () => {
               </Link>
             );
           })}
+          <Link
+            className="btn btn-link text-gold"
+            href="/privacy-policy"
+            onClick={() => setIsOpen(false)}
+          >
+            Polityka prywatności
+          </Link>
         </ul>
       </Drawer>
     </div>
