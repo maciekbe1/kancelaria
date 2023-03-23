@@ -15,13 +15,13 @@ const About = () => {
           priority
           quality={100}
         />
-        <Container className="p-0 text-white">
+        <Container className="xs:p-0">
           <motion.h1
             initial={{ opacity: 0, y: 55 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 55 }}
             transition={{ delay: 0.55, duration: 1 }}
-            className="py-4 font-bold text-center uppercase font-domine text-header-md lg:text-header-xl drop-shadow-lg hero-text bg-gradient-to-l from-slate-700"
+            className="py-4 font-bold text-center text-white uppercase font-domine text-header-md lg:text-header-xl drop-shadow-lg bg-gradient-to-l from-slate-700"
           >
             <span className="py-1 text-gold">Zespół</span> Kancelarii
           </motion.h1>

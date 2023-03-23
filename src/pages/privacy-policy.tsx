@@ -14,13 +14,13 @@ const PrivacyPolicy = () => {
           priority
           quality={100}
         />
-        <Container className="p-0 text-white">
+        <Container className="xs:p-0">
           <motion.h1
             initial={{ opacity: 0, y: 55 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 55 }}
             transition={{ delay: 0.55, duration: 1 }}
-            className="py-4 font-domine font-bold text-center uppercase text-header-sm lg:text-header-xl drop-shadow-lg bg-slate-600-500/[.7] hero-text bg-gradient-to-l from-slate-700"
+            className="py-4 font-domine font-bold text-center uppercase text-header-sm lg:text-header-xl drop-shadow-lg bg-slate-600-500/[.7] bg-gradient-to-l from-slate-700 text-white"
           >
             <span className="py-1 text-gold">Polityka</span> prywatności
           </motion.h1>
