@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Balancer from "react-wrap-balancer";
 import { LogoIcon } from "icons/LogoIcon";
-import { Restrukturyzacje } from "components/Specjalizations/restrukturyzacje";
+import { Restrukturyzacje } from "components/Specjalizations/Restrukturyzacje";
 import { PostepowanieUpadlosciowe } from "components/Specjalizations/PostepowanieUpadlosciowe";
 import { PomocPrawna } from "components/Specjalizations/PomocPrawna";
 import { PrawoGospodarcze } from "components/Specjalizations/PrawoGospodarcze";
