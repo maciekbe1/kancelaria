@@ -1,19 +1,9 @@
-import Balancer from "react-wrap-balancer";
-import { LogoIcon } from "icons/LogoIcon";
+import { Divider } from "components/Divider/Divider";
 
-export const Restructuring = () => {
+export const Restrukturyzacje = () => {
   return (
-    <>
-      <h2 className="my-8 font-serif text-xl text-center md:text-3xl lg:text-5xl">
-        <Balancer>
-          POSTĘPOWANIA RESTRUKTURYZACYJNE I UPADŁOŚCIOWE - TO NASZA GŁÓWNA
-          SPECJALIZACJA
-        </Balancer>
-      </h2>
-      <div className="flex justify-center">
-        <LogoIcon size={96} />
-      </div>
-      <h3 className="mt-12 mb-12 font-serif text-xl text-center lg:text-3xl">
+    <div>
+      <h3 className="mt-12 mb-12 font-serif text-xl font-bold text-center lg:text-3xl">
         POSTĘPOWANIA RESTRUKTURYZACYJNE
       </h3>
       <p className="mb-8">
@@ -22,7 +12,7 @@ export const Restructuring = () => {
       </p>
       <p className="mb-8">
         Pomagamy wybrać odpowiedni rodzaj postępowania i reprezentujemy
-        przedsiębiorców -w tym rolników prowadzących gospodarstwa rolne, w
+        przedsiębiorców - w tym rolników prowadzących gospodarstwa rolne, w
         postępowaniach restrukturyzacyjnych dążąc do osiągnięcia celu tych
         postępowań jakim jest{" "}
         <span className="font-bold">zawarcie układu z wierzycielami.</span>
@@ -74,38 +64,15 @@ export const Restructuring = () => {
       </p>
       <ul className="list-disc">
         <li className="mb-4 ml-10 font-bold">
-          obowiązuje zakaz prowadzenia egzekucji z majątku dłużnika
+          umorzeniu zobowiązań, np. odsetek, części kapitału
         </li>
         <li className="mb-4 ml-10 font-bold">
-          obowiązuje zakaz wypowiadania umów kredytów/pożyczek oraz innych umów
-          o podstawowym znaczeniu dla prowadzenia działalności gospodarczej
-          dłużnika w przypadkach określonych w ustawie{" "}
+          zmianie harmonogramów spłaty zobowiązań- dostosowanie ich do
+          możliwości finansowych dłużnika
         </li>
-        <li className="mb-4 ml-10 font-bold">
-          obowiązuje zakaz spłacania przez dłużnika zobowiązań objętych układem
-          w przyspieszonym postępowaniu układowym oraz postępowaniu sanacyjnym
-        </li>
+        <li className="mb-12 ml-10 font-bold">karencji w spłacie zobowiązań</li>
       </ul>
-      <div className="p-6 mb-12 rounded-sm shadow-2xl">
-        <p className="text-xl italic">Przedsiębiorco,</p>
-        <br />
-        <p className="text-lg italic">
-          obecne czasy są niezwykle trudne. Jeśli mierzysz się z problemami
-          finansowymi, przez które w najbliższym czasie możesz utracić zdolność
-          do regulowania zobowiązań pieniężnych warto wdrożyć proces
-          restrukturyzacji.
-        </p>
-        <br />
-        <p className="text-lg italic">
-          Jako profesjonalni pełnomocnicy, jesteśmy w stanie pomóc Ci otworzyć
-          postępowanie i przeprowadzić cały proces restrukturyzacji, abyś mógł
-          skupić się jedynie na prowadzeniu swojej działalności.
-        </p>
-        <br />
-        <p className="text-lg italic font-bold text-center ">
-          Resztą zajmiemy się my.
-        </p>
-      </div>
-    </>
+      <Divider id="upadlosc" />
+    </div>
   );
 };
