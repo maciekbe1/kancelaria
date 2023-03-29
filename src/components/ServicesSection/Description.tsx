@@ -36,7 +36,7 @@ export const Description = () => {
           Świadczymy kompleksową pomoc prawną na rzecz osób fizycznych
           nieprowadzących działalności gospodarczej oraz przedsiębiorców zarówno
           w zakresie pojedynczych spraw, jak również poprzez stałą obsługę
-          prawą.
+          prawną.
         </p>
         <br />
         <p>
