@@ -28,8 +28,12 @@ export const agents = [
   {
     id: "anna-tomala",
     name: "Anna Tomala",
-    image: "",
-    description: [],
-    spec: "Specjalista ds. restrukturyzacji",
+    image: "/images/Anna-Tomala.jpg",
+    description: [
+      "Absolwentka Uniwersytetu Warszawskiego na wydziale dziennikarstwa. Uczestniczka licznych szkoleń z zakresu prawa bankowego, prawa gospodarczego, rozwijania kompetencji handlowych i menedżerskich. Z sukcesami zarządzała siecią sprzedaży rozproszonej w obszarze bankowości korporacyjnej.",
+      "Od wielu lat prowadzi konsultacje pod kątem optymalizacji kosztów prowadzonej działalności i wdraża działania naprawcze z wykorzystaniem narzędzi na gruncie prawa restrukturyzacyjnego.",
+      "Zdobytą wiedzę doświadczenie wykorzystuje w doradztwie strategicznym i finansowym dla przedsiębiorców.",
+    ],
+    spec: "Specjalista ds. restrukturyzacji i upadłości",
   },
 ];

@@ -24,9 +24,12 @@ export const SuccessCounter = () => {
     >
       <h2 className="mb-16 font-serif text-5xl text-center">Nasze Sukcesy</h2>
       <div className="flex flex-wrap justify-center lg:justify-between">
-        {success.map((success) => {
+        {success.map((success, index) => {
           return (
-            <div className="flex flex-col items-center w-full mb-8 sm:w-1/2 md:w-1/3 lg:w-1/4 md:mb-0">
+            <div
+              key={index}
+              className="flex flex-col items-center w-full mb-8 sm:w-1/2 md:w-1/3 lg:w-1/4 md:mb-0"
+            >
               <div className="relative w-fit">
                 <CountUp
                   enableScrollSpy={true}

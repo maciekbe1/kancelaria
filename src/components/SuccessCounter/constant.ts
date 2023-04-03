@@ -11,7 +11,7 @@ export const success = [
   },
   {
     suffix: "mln",
-    number: 100,
+    number: 10,
     title: "Umorzonych długów",
   },
   {
