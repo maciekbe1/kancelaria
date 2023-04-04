@@ -7,6 +7,7 @@ module.exports = {
         sans: ["var(--open-sans-font)", ...fontFamily.sans],
         serif: ["var(--lora-font)", ...fontFamily.serif],
         domine: ["var(--domine-font)", ...fontFamily.serif],
+        raleway: ["var(--raleway-font)", ...fontFamily.serif],
       },
       fontSize: {
         "header-sm": ["1.875rem", "4rem"],

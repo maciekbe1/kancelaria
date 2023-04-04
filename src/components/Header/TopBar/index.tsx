@@ -8,7 +8,7 @@ export const TopBar = () => {
       <Container>
         <div className="flex">
           {contacts.map((contact, index) => (
-            <div className="flex mr-3 last:mr-0" key={index}>
+            <div className="flex first:mr-3 last:ms-auto" key={index}>
               <Icon path={contact.icon} size={1} />
               <a
                 href={`${contact.type}:${contact.value}`}

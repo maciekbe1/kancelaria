@@ -22,7 +22,7 @@ export const SuccessCounter = () => {
       transition={{ duration: 0.5 }}
       className="my-6 lg:my-24"
     >
-      <h2 className="mb-16 font-serif text-5xl text-center">Nasze Sukcesy</h2>
+      <h3 className="mb-16 font-serif text-5xl text-center">Nasze Sukcesy</h3>
       <div className="flex flex-wrap justify-center lg:justify-between">
         {success.map((success, index) => {
           return (

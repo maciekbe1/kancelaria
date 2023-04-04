@@ -8,7 +8,7 @@ const PrivacyPolicy = () => {
       <div className="w-full h-[400px] lg:h-[540px] flex justify-center items-center overflow-hidden relative bg-black -mt-[86px]">
         <Image
           alt="hero"
-          src="/images/privacy.jpg"
+          src="/images/privacy.webp"
           fill
           className="object-cover opacity-60"
           priority

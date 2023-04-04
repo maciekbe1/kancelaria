@@ -24,14 +24,14 @@ export const Description = () => {
       >
         <Image
           alt="biuro"
-          className="object-cover rounded-md "
+          className="object-cover rounded-md"
           sizes="(max-width: 768px) 90vw, (max-width: 1920px) 50vw, 880px"
-          src="/images/services.jpg"
+          src="/images/services.webp"
           fill
         />
       </motion.div>
       <div>
-        <h2 className="mb-6 font-serif text-5xl">Nasze usługi</h2>
+        <h3 className="mb-6 font-serif text-5xl">Nasze usługi</h3>
         <p className="font-light">
           Świadczymy kompleksową pomoc prawną na rzecz osób fizycznych
           nieprowadzących działalności gospodarczej oraz przedsiębiorców zarówno

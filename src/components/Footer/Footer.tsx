@@ -21,9 +21,10 @@ export const Footer = () => {
           ))}
         </div>
 
-        <ul className="flex flex-wrap items-center mt-3 sm:mt-0">
+        <ul className="flex flex-wrap items-center sm:mt-2">
           <li>
             <Link
+              aria-label="Polityka prywatności"
               href="/privacy-policy"
               className="mr-4 text-sm font-semibold text-gray-300 hover:text-gold md:mr-6 dark:text-gray-400"
             >

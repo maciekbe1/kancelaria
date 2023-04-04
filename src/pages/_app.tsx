@@ -5,7 +5,6 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 import type { AppProps } from "next/app";
-import { Analytics } from "@vercel/analytics/react";
 import { Layout, Styles } from "components";
 
 export default function MyApp({ Component, pageProps }: AppProps) {
@@ -14,7 +13,6 @@ export default function MyApp({ Component, pageProps }: AppProps) {
       <Styles />
       <Layout>
         <Component {...pageProps} />
-        <Analytics />
       </Layout>
     </>
   );
