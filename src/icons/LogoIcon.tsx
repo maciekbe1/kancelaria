@@ -11,6 +11,7 @@ export const LogoIcon: React.FC<LogoIconProps> = ({ size }) => {
       viewBox="0 0 1280 1232"
       xmlns="http://www.w3.org/2000/svg"
       fill="#d4af37"
+      className="transition-all ease-in-out delay-150"
     >
       <metadata>
         Created by potrace 1.15, written by Peter Selinger 2001-2017

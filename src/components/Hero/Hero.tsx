@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export const Hero = () => {
   return (
-    <div className="w-full h-[600px] lg:h-[740px] flex justify-center items-center overflow-hidden relative -mt-[86px]">
+    <div className="w-full h-[600px] lg:h-[740px] flex justify-center items-center overflow-hidden relative">
       <Image
         alt="hero"
         src="/images/home.webp"

@@ -1,11 +1,16 @@
+import clsx from "clsx";
 import { Footer, Header } from "components";
+import useHeaderState from "hooks/useHeaderState";
 import Head from "next/head";
 import { structuredJSON } from "./constants";
+
 type LayoutProps = {
   children: Array<React.ReactElement> | React.ReactElement;
 };
 
 export const Layout = ({ children }: LayoutProps) => {
+  const { isViewportScrolled, isMobile } = useHeaderState();
+
   return (
     <>
       <Head>
@@ -47,7 +52,14 @@ export const Layout = ({ children }: LayoutProps) => {
         />
       </Head>
       <Header />
-      <main>{children}</main>
+      <main
+        className={clsx(
+          "transition-all ease-in-out delay-150",
+          isViewportScrolled || isMobile ? "-mt-[64px]" : "-mt-[86px]"
+        )}
+      >
+        {children}
+      </main>
       <Footer />
     </>
   );

@@ -13,7 +13,7 @@ export const NavBar = () => {
   return (
     <div
       className={clsx(
-        "sticky top-0 z-30 w-full border-b-2 border-gold -mt-1",
+        "sticky top-0 z-30 w-full border-b-2 border-gold -mt-1 transition ease-in-out delay-150",
         isViewportScrolled ? "bg-slate-200/90" : "bg-slate-800/50"
       )}
     >
@@ -24,7 +24,7 @@ export const NavBar = () => {
         )}
       >
         <Link href="/" aria-label="Przejdź do strony głównej">
-          <LogoIcon size={isMobile ? 32 : 54} />
+          <LogoIcon size={isMobile || isViewportScrolled ? 32 : 54} />
         </Link>
         <div className="flex items-center space-x-1">
           <ul className="hidden space-x-2 md:inline-flex">
@@ -51,6 +51,8 @@ export const NavBar = () => {
             <button
               className="flex-none drawer-content"
               onClick={() => setIsOpen(true)}
+              role="button"
+              aria-label="otwórz menu"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

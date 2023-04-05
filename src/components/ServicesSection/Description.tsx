@@ -20,18 +20,18 @@ export const Description = () => {
         animate={inView ? "visible" : "hidden"}
         variants={variants}
         transition={{ duration: 0.5 }}
-        className="relative w-full sm:h-60 md:h-auto"
+        className="flex items-center w-full overflow-hidden rounded-md sm:h-60 md:h-auto"
       >
         <Image
           alt="biuro"
-          className="object-cover rounded-md"
-          sizes="(max-width: 768px) 90vw, (max-width: 1920px) 50vw, 880px"
+          className="w-full md:scale-[3] lg:scale-[1.35]"
           src="/images/services.webp"
-          fill
+          width={556}
+          height={456}
         />
       </motion.div>
       <div>
-        <h3 className="mb-6 font-serif text-5xl">Nasze usługi</h3>
+        <h2 className="mb-6 font-serif text-5xl">Nasze usługi</h2>
         <p className="font-light">
           Świadczymy kompleksową pomoc prawną na rzecz osób fizycznych
           nieprowadzących działalności gospodarczej oraz przedsiębiorców zarówno
