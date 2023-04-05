@@ -16,5 +16,7 @@ export const contacts = [
     type: "mailto",
     value: "biuro@kancelaria-restrukturyzacje.pl",
     icon: mdiEmailOutline,
+    target: "_blank",
+    rel: "noopener noreferrer",
   },
 ];

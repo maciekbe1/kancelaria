@@ -12,6 +12,8 @@ export const TopBar = () => {
               <Icon path={contact.icon} size={1} />
               <a
                 href={`${contact.type}:${contact.value}`}
+                target={contact.target}
+                rel={contact.rel}
                 className="ml-2 hover:text-gold"
               >
                 {contact.value}

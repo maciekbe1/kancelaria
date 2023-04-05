@@ -14,6 +14,8 @@ export const Footer = () => {
               <a
                 href={`${contact.type}:${contact.value}`}
                 className="ml-2 hover:text-gold"
+                target={contact.target}
+                rel={contact.rel}
               >
                 {contact.value}
               </a>
