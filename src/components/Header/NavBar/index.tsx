@@ -19,7 +19,7 @@ export const NavBar = () => {
     >
       <Container
         className={clsx(
-          "flex items-center justify-between mx-auto",
+          "flex items-center justify-between mx-auto transition ease-in-out delay-150",
           isViewportScrolled ? "text-slate-900" : "text-white"
         )}
       >
