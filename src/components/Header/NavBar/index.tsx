@@ -13,23 +13,24 @@ export const NavBar = () => {
   return (
     <div
       className={clsx(
-        "sticky top-0 z-30 w-full border-b-2 border-gold -mt-1",
+        "sticky top-0 z-30 w-full border-b-2 border-gold -mt-1 transition ease-in-out delay-150",
         isViewportScrolled ? "bg-slate-200/90" : "bg-slate-800/50"
       )}
     >
       <Container
         className={clsx(
-          "flex items-center justify-between mx-auto",
+          "flex items-center justify-between mx-auto transition ease-in-out delay-150",
           isViewportScrolled ? "text-slate-900" : "text-white"
         )}
       >
-        <Link href="/">
-          <LogoIcon size={isMobile ? 32 : 54} />
+        <Link href="/" aria-label="Przejdź do strony głównej">
+          <LogoIcon size={isMobile || isViewportScrolled ? 32 : 54} />
         </Link>
         <div className="flex items-center space-x-1">
           <ul className="hidden space-x-2 md:inline-flex">
             <li>
               <Link
+                aria-label="Przeczytaj więcej o zespole kancelarii"
                 href="/zespol"
                 className="px-4 py-2 font-semibold hover:text-gold"
               >
@@ -38,6 +39,7 @@ export const NavBar = () => {
             </li>
             <li>
               <Link
+                aria-label="Przeczytaj więcej o specjalizacjach"
                 href="/specjalizacje"
                 className="px-4 py-2 font-semibold hover:text-gold"
               >
@@ -49,6 +51,8 @@ export const NavBar = () => {
             <button
               className="flex-none drawer-content"
               onClick={() => setIsOpen(true)}
+              role="button"
+              aria-label="otwórz menu"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -70,8 +74,9 @@ export const NavBar = () => {
         </div>
       </Container>
       <Drawer isOpen={isOpen} onClose={() => setIsOpen(false)}>
-        <ul className="flex flex-col">
+        <div className="flex flex-col">
           <Link
+            aria-label="Przeczytaj więcej o zespole kancelarii"
             className="btn btn-link text-gold"
             href="/zespol"
             onClick={() => setIsOpen(false)}
@@ -81,6 +86,7 @@ export const NavBar = () => {
           {links.map((link, index) => {
             return (
               <Link
+                aria-label={`Przeczytaj więcej o ${link.text}`}
                 key={index}
                 className="btn btn-link text-gold"
                 href={`/specjalizacje#${link.id}`}
@@ -91,13 +97,14 @@ export const NavBar = () => {
             );
           })}
           <Link
+            aria-label="Polityka prywatności"
             className="btn btn-link text-gold"
             href="/privacy-policy"
             onClick={() => setIsOpen(false)}
           >
             Polityka prywatności
           </Link>
-        </ul>
+        </div>
       </Drawer>
     </div>
   );

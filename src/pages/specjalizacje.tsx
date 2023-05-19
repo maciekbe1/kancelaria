@@ -13,10 +13,10 @@ import { Kredyty } from "components/Specjalizations/Kredyty";
 const Specializations = () => {
   return (
     <>
-      <div className="w-full h-[400px] lg:h-[540px] flex justify-center items-center overflow-hidden relative bg-black -mt-[86px]">
+      <div className="w-full h-[400px] lg:h-[540px] flex justify-center items-center overflow-hidden relative bg-black">
         <Image
           alt="hero"
-          src="/images/specializations.jpg"
+          src="/images/specializations.webp"
           fill
           className="object-cover"
           priority

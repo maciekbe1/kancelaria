@@ -20,14 +20,14 @@ export const Description = () => {
         animate={inView ? "visible" : "hidden"}
         variants={variants}
         transition={{ duration: 0.5 }}
-        className="relative w-full sm:h-60 md:h-auto"
+        className="flex items-center w-full overflow-hidden rounded-md sm:h-60 md:h-auto"
       >
         <Image
           alt="biuro"
-          className="object-cover rounded-md "
-          sizes="(max-width: 768px) 90vw, (max-width: 1920px) 50vw, 880px"
-          src="/images/services.jpg"
-          fill
+          className="w-full md:scale-[3] lg:scale-[1.35]"
+          src="/images/services.webp"
+          width={556}
+          height={456}
         />
       </motion.div>
       <div>

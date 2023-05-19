@@ -6,10 +6,10 @@ import { AnimatePresence, motion } from "framer-motion";
 
 export const Hero = () => {
   return (
-    <div className="w-full h-[600px] lg:h-[740px] flex justify-center items-center overflow-hidden relative -mt-[86px]">
+    <div className="w-full h-[600px] lg:h-[740px] flex justify-center items-center overflow-hidden relative">
       <Image
         alt="hero"
-        src="/images/home.jpg"
+        src="/images/home.webp"
         fill
         className="object-cover"
         priority
@@ -30,11 +30,11 @@ export const Hero = () => {
           </motion.div>
 
           <div className="justify-end hidden drop-shadow-lg md:flex">
-            <ul className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center">
               <AnimatePresence>
                 {links.map((link, index) => {
                   return (
-                    <motion.li
+                    <motion.div
                       key={index}
                       initial={{ opacity: 0 }}
                       animate={{ opacity: 1 }}
@@ -43,17 +43,18 @@ export const Hero = () => {
                       className="mb-2 md:mb-3 last:mb-0"
                     >
                       <Link
+                        aria-label={`Przeczytaj więcej o ${link.text}`}
                         href={`/specjalizacje#${link.id}`}
                         role="button"
                         className="btn btn-wide btn-sm md:btn-md hover:text-gold"
                       >
                         {link.text}
                       </Link>
-                    </motion.li>
+                    </motion.div>
                   );
                 })}
               </AnimatePresence>
-            </ul>
+            </div>
           </div>
         </div>
       </Container>

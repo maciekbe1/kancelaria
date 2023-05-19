@@ -39,11 +39,12 @@ export const AgentSwiper = () => {
                       <p className="mb-4 text-2xl uppercase text-gold">
                         {agent.spec}
                       </p>
-                      <h3 className="mb-6 font-serif text-6xl">{agent.name}</h3>
+                      <h2 className="mb-6 font-serif text-6xl">{agent.name}</h2>
                       <p>{agent.description[0]}</p>
                     </div>
                     <div>
                       <Link
+                        aria-label={`Przeczytaj więcej o specjaliście ${agent.name}`}
                         className="mb-6 btn btn-outline btn-md"
                         href={`/zespol#${agent.id}`}
                       >
@@ -89,8 +90,20 @@ export const AgentSwiper = () => {
 const Controls = () => {
   return (
     <div className="flex">
-      <button className="mr-3 prev btn btn-sm">{"<"}</button>
-      <button className="next btn btn-sm">{">"}</button>
+      <button
+        role="button"
+        aria-label="slider lewo"
+        className="mr-3 prev btn btn-sm"
+      >
+        {"<"}
+      </button>
+      <button
+        role="button"
+        aria-label="slider prawo"
+        className="next btn btn-sm"
+      >
+        {">"}
+      </button>
     </div>
   );
 };

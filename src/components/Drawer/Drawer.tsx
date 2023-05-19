@@ -25,7 +25,7 @@ export const Drawer = ({ children, isOpen, onClose }: DrawerProps) => {
       >
         <article className="relative flex flex-col w-screen h-full max-w-lg pb-10 space-y-6 overflow-y-scroll">
           <div className="flex justify-end p-4">
-            <button onClick={onClose}>
+            <button onClick={onClose} aria-label="zamknij menu" role="button">
               <Icon path={mdiClose} size={1} />
             </button>
           </div>
