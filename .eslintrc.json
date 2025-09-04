@@ -1,12 +1,27 @@
 {
-  "extends": ["next", "plugin:prettier/recommended"],
-  "plugins": ["prettier"],
+  "parser": "@typescript-eslint/parser",
+  "extends": [
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "plugin:@next/next/recommended"
+  ],
+  "plugins": ["prettier", "@typescript-eslint"],
+  "ignorePatterns": [
+    ".git",
+    ".next",
+    ".vscode",
+    "node_modules",
+    "tailwind.config.js",
+    "next.config.js"
+  ],
   "rules": {
     "prettier/prettier": [
       "error",
       {
         "endOfLine": "auto"
       }
-    ]
+    ],
+    "@typescript-eslint/no-unused-vars": "error",
+    "@typescript-eslint/no-explicit-any": "error"
   }
 }
