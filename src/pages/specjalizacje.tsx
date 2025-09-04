@@ -1,14 +1,14 @@
 import { Container } from "components";
-import { motion } from "framer-motion";
-import Image from "next/image";
-import Balancer from "react-wrap-balancer";
-import { LogoIcon } from "icons/LogoIcon";
-import { Restrukturyzacje } from "components/Specjalizations/Restrukturyzacje";
-import { PostepowanieUpadlosciowe } from "components/Specjalizations/PostepowanieUpadlosciowe";
-import { PomocPrawna } from "components/Specjalizations/PomocPrawna";
-import { PrawoGospodarcze } from "components/Specjalizations/PrawoGospodarcze";
 import { Dochodzenie } from "components/Specjalizations/Dochodzenie";
 import { Kredyty } from "components/Specjalizations/Kredyty";
+import { PomocPrawna } from "components/Specjalizations/PomocPrawna";
+import { PostepowanieUpadlosciowe } from "components/Specjalizations/PostepowanieUpadlosciowe";
+import { PrawoGospodarcze } from "components/Specjalizations/PrawoGospodarcze";
+import { Restrukturyzacje } from "components/Specjalizations/Restrukturyzacje";
+import { motion } from "framer-motion";
+import { LogoIcon } from "icons/LogoIcon";
+import Image from "next/image";
+import Balancer from "react-wrap-balancer";
 
 const Specializations = () => {
   return (
@@ -30,7 +30,7 @@ const Specializations = () => {
             transition={{ delay: 0.55, duration: 1 }}
             className="drop-shadow-lg hero-text bg-gradient-to-l from-slate-700"
           >
-            <h1 className="py-4 font-bold text-center text-transparent uppercase font-domine text-header-sm lg:text-header-xl bg-gradient-to-r from-gold from-40% to-white to-60% bg-clip-text">
+            <h1 className="py-4 font-bold text-center text-transparent uppercase font-domine leading-tight break-words fluid-title bg-gradient-to-r from-gold from-40% to-white to-60% bg-clip-text">
               Specjalizacje
             </h1>
           </motion.div>

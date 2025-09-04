@@ -24,11 +24,13 @@ export const Hero = () => {
             transition={{ delay: 0.55, duration: 1 }}
             className="relative h-max md:col-span-2"
           >
-            <div className="absolute inset-0 z-0 bg-gradient-to-r from-slate-700/90  via-slate-700/60 to-transparent rounded-sm" />
-            <div className="relative z-10 px-4 py-6 uppercase md:px-8 lg:px-10 font-domine">
+            <div className="absolute inset-0 z-0 rounded-sm bg-gradient-to-r from-slate-700/90 via-slate-700/90 to-transparent" />
+            <div className="relative z-10 px-6 py-6 uppercase md:px-8 lg:px-10 font-domine">
               <h1 className="font-bold leading-tight break-words fluid-title">
-                Kancelaria{" "}
-                <span className="text-gold">Restrukturyzacje i Upadłości</span>
+                Kancelaria
+                <span className="block text-gold">
+                  Restrukturyzacje i Upadłości
+                </span>
               </h1>
               <p className="mt-3 normal-case lg:text-left fluid-sub">
                 Radcy prawni i licencjonowani doradcy restrukturyzacyjni
@@ -39,7 +41,7 @@ export const Hero = () => {
             </div>
           </motion.div>
 
-          <div className="hidden md:flex md:col-span-1 drop-shadow-lg justify-end">
+          <div className="justify-end hidden md:flex md:col-span-1 drop-shadow-lg">
             <div className="flex flex-col justify-center">
               <AnimatePresence>
                 {links.map((link, index) => {
@@ -68,25 +70,6 @@ export const Hero = () => {
           </div>
         </div>
       </Container>
-      <style jsx>{`
-        .fluid-title {
-          font-size: clamp(2.5rem, 2.5rem + 2.5vw, 4rem);
-        }
-        .fluid-sub {
-          font-size: clamp(1.125rem, 0.9rem + 0.6vw, 1.5rem);
-        }
-        .fluid-sub-sm {
-          font-size: clamp(1rem, 0.85rem + 0.5vw, 1.25rem);
-        }
-        @supports (hyphens: auto) {
-          .fluid-title {
-            hyphens: auto;
-          }
-        }
-        .fluid-title {
-          overflow-wrap: anywhere;
-        }
-      `}</style>
     </div>
   );
 };

@@ -11,3 +11,23 @@
 #__next > main {
   flex: 1;
 }
+
+/* Global fluid heading to match Hero H1 */
+.fluid-title {
+  font-size: clamp(1.75rem, 1.1rem + 3.5vw, 3.5rem);
+  line-height: 1.1;
+  overflow-wrap: anywhere;
+}
+@supports (hyphens: auto) {
+  .fluid-title {
+    hyphens: auto;
+  }
+}
+
+/* Supporting fluid subtitle sizes used in Hero */
+.fluid-sub {
+  font-size: clamp(1.125rem, 0.9rem + 0.6vw, 1.5rem);
+}
+.fluid-sub-sm {
+  font-size: clamp(1rem, 0.85rem + 0.5vw, 1.25rem);
+}
