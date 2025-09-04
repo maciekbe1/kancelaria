@@ -30,7 +30,7 @@ const Specializations = () => {
             transition={{ delay: 0.55, duration: 1 }}
             className="drop-shadow-lg hero-text bg-gradient-to-l from-slate-700"
           >
-            <h1 className="py-4 font-bold text-center text-transparent uppercase font-domine leading-tight break-words fluid-title bg-gradient-to-r from-gold from-40% to-white to-60% bg-clip-text">
+            <h1 className="py-4 font-bold text-center text-transparent uppercase font-domine leading-tight break-words fluid-title bg-gradient-to-r from-gold from-40% to-white to-60% bg-clip-text px-6 md:px-0">
               Specjalizacje
             </h1>
           </motion.div>
