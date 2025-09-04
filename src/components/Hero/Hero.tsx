@@ -26,7 +26,7 @@ export const Hero = () => {
           >
             <div className="absolute inset-0 z-0 rounded-sm bg-gradient-to-r from-slate-700/90 via-slate-700/90 to-transparent" />
             <div className="relative z-10 px-6 py-6 uppercase md:px-8 lg:px-10 font-domine">
-              <h1 className="font-bold leading-tight break-words fluid-title">
+              <h1 className="font-bold leading-tight break-words fluid-title hyphens-title ">
                 Kancelaria
                 <span className="block text-gold">
                   Restrukturyzacje i Upadłości
