@@ -18,8 +18,9 @@
   line-height: 1.1;
   overflow-wrap: anywhere;
 }
+
 @supports (hyphens: auto) {
-  .fluid-title {
+  .hyphens-title {
     hyphens: auto;
   }
 }
