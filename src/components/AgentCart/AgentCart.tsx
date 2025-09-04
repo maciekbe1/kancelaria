@@ -1,9 +1,9 @@
-import { useInView } from "react-intersection-observer";
-import { domAnimation, LazyMotion, m } from "framer-motion";
-import Icon from "@mdi/react";
-import Image from "next/image";
 import { mdiImageOffOutline } from "@mdi/js";
+import Icon from "@mdi/react";
 import clsx from "clsx";
+import { domAnimation, LazyMotion, m } from "framer-motion";
+import Image from "next/image";
+import { useInView } from "react-intersection-observer";
 import { AgentContact } from "./AgentContact";
 
 export type AgentCartProps = {
@@ -30,7 +30,7 @@ export const AgentCart = ({ isImageRight, agent }: AgentCartProps) => {
     visible: { opacity: 1 },
   };
   const isTextUnderImage =
-    agent.name === "Wiktoria Danowska" || agent.name === "Łukasz Zabłocki";
+    agent.id === "wiktoria-danowska" || agent.id === "lukasz-zablocki";
   return (
     <LazyMotion features={domAnimation}>
       <m.div
