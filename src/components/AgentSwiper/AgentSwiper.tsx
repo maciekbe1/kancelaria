@@ -1,11 +1,11 @@
+import { mdiImageOffOutline } from "@mdi/js";
+import Icon from "@mdi/react";
+import { domAnimation, LazyMotion, m } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import { A11y, Autoplay, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { agents } from "./constants";
-import Icon from "@mdi/react";
-import { mdiImageOffOutline } from "@mdi/js";
-import Link from "next/link";
-import { domAnimation, LazyMotion, m } from "framer-motion";
 
 export const AgentSwiper = () => {
   return (
@@ -45,7 +45,7 @@ export const AgentSwiper = () => {
                     <div>
                       <Link
                         aria-label={`Przeczytaj więcej o specjaliście ${agent.name}`}
-                        className="mb-6 btn btn-outline btn-md"
+                        className="mt-4 mb-6 btn btn-outline btn-md"
                         href={`/zespol#${agent.id}`}
                       >
                         Zobacz więcej

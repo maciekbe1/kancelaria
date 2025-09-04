@@ -23,7 +23,7 @@ const About = () => {
             transition={{ delay: 0.55, duration: 1 }}
             className=" drop-shadow-lg bg-gradient-to-l from-slate-700"
           >
-            <h1 className="py-4 font-bold text-center text-white uppercase font-domine text-header-md lg:text-header-xl">
+            <h1 className="py-4 font-bold text-center text-white uppercase font-domine leading-tight break-words fluid-title">
               <span className="py-1 text-gold">Zespół</span> Kancelarii
             </h1>
           </motion.div>

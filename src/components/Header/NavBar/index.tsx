@@ -2,9 +2,9 @@ import clsx from "clsx";
 import { Container, Drawer } from "components";
 import { links } from "components/Hero/constants";
 import useHeaderState from "hooks/useHeaderState";
+import { LogoIcon } from "icons/LogoIcon";
 import Link from "next/link";
 import { useState } from "react";
-import { LogoIcon } from "icons/LogoIcon";
 
 export const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
