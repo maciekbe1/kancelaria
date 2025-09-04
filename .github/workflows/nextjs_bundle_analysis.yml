@@ -87,10 +87,15 @@ jobs:
       - name: Get Comment Body
         id: get-comment-body
         if: success() && github.event.number
-
         run: |
+          BODY_F=.next/analyze/__bundle_analysis_comment.txt
           echo "body<<EOF" >> $GITHUB_OUTPUT
-          echo "$(cat .next/analyze/__bundle_analysis_comment.txt)" >> $GITHUB_OUTPUT
+          if [ -f "$BODY_F" ]; then
+            cat "$BODY_F" >> $GITHUB_OUTPUT
+          else
+            echo "<!-- __NEXTJS_BUNDLE -->" >> $GITHUB_OUTPUT
+            echo "Bundle analysis completed. No base comparison available yet." >> $GITHUB_OUTPUT
+          fi
           echo EOF >> $GITHUB_OUTPUT
       - name: Find Comment
         uses: peter-evans/find-comment@v2
@@ -102,14 +107,14 @@ jobs:
 
       - name: Create Comment
         uses: peter-evans/create-or-update-comment@v2
-        if: success() && github.event.number && steps.fc.outputs.comment-id == 0
+        if: success() && github.event.number && steps.fc.outputs.comment-id == 0 && steps.get-comment-body.outputs.body != ''
         with:
           issue-number: ${{ github.event.number }}
           body: ${{ steps.get-comment-body.outputs.body }}
 
       - name: Update Comment
         uses: peter-evans/create-or-update-comment@v2
-        if: success() && github.event.number && steps.fc.outputs.comment-id != 0
+        if: success() && github.event.number && steps.fc.outputs.comment-id != 0 && steps.get-comment-body.outputs.body != ''
         with:
           issue-number: ${{ github.event.number }}
           body: ${{ steps.get-comment-body.outputs.body }}
