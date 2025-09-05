@@ -36,7 +36,7 @@ export const Hero = () => {
                 Radcy prawni i licencjonowani doradcy restrukturyzacyjni
               </p>
               <p className="mt-1 normal-case lg:text-left fluid-sub-sm">
-                – twoi doradcy w kryzysie
+                – Twoi doradcy w kryzysie
               </p>
             </div>
           </motion.div>

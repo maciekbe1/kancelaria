@@ -1,5 +1,5 @@
-import { useInView } from "react-intersection-observer";
 import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 export const Paper = () => {
   const { ref, inView } = useInView({
     threshold: 0.5,
@@ -29,14 +29,14 @@ export const Paper = () => {
       </p>
       <br />
       <p className="text-lg italic">
-        Jako profesjonalni pełnomocnicy przy współpracy ze specjalistami z
-        różnych dziedzin, jesteśmy w stanie pomóc Ci otworzyć postępowanie i
-        przeprowadzić cały proces restrukturyzacji, abyś mógł skupić się jedynie
-        na prowadzeniu swojej działalności.
+        Jako licencjonowani doradcy restrukturyzacyjni przy współpracy ze
+        specjalistami z różnych dziedzin, jesteśmy w stanie pomóc Ci otworzyć
+        postępowanie i przeprowadzić cały proces restrukturyzacji, abyś mógł
+        skupić się jedynie na prowadzeniu swojej działalności.
       </p>
       <br />
       <p className="text-lg italic font-bold text-center ">
-        Resztą zajmiemy się my.
+        Twoi doradcy w kryzysie
       </p>
     </motion.div>
   );
