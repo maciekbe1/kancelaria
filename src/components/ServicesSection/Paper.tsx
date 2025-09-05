@@ -36,7 +36,7 @@ export const Paper = () => {
       </p>
       <br />
       <p className="text-lg italic font-bold text-center ">
-        Twoi doradcy w kryzysie
+        Resztą zajmiemy się my.
       </p>
     </motion.div>
   );
