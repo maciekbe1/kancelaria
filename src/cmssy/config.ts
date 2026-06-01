@@ -5,4 +5,5 @@ export const cmssy: CmssyNextConfig = {
   workspaceSlug: process.env.CMSSY_WORKSPACE_SLUG ?? "",
   draftSecret: process.env.CMSSY_DRAFT_SECRET ?? "",
   editorOrigin: process.env.CMSSY_EDITOR_ORIGIN ?? "",
+  defaultLocale: "pl",
 };
