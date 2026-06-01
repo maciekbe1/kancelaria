@@ -9,44 +9,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "export": "next export",
-    "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "lint:fix": "eslint --fix . --ext .js,.jsx,.ts,.tsx",
-    "prettier": "prettier --check \"**/*.{js,jsx,ts,tsx}\"",
-    "prettier:fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\"",
-    "fix": "prettier --write \"**/*.{js,jsx,ts,tsx}\" | eslint --fix . --ext .js,.jsx,.ts,.tsx"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@mdi/js": "^7.2.96",
-    "@mdi/react": "^1.6.1",
-    "@tailwindcss/forms": "^0.5.3",
-    "@types/node": "18.14.1",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
-    "@vercel/analytics": "^0.1.11",
-    "clsx": "^1.2.1",
-    "daisyui": "^2.51.5",
-    "eslint": "8.34.0",
-    "eslint-config-next": "13.2.1",
-    "framer-motion": "^10.10.0",
-    "next": "13.2.1",
-    "react": "18.2.0",
-    "react-countup": "^6.4.2",
-    "react-dom": "18.2.0",
-    "react-intersection-observer": "^9.4.3",
-    "react-wrap-balancer": "^0.4.0",
-    "swiper": "^9.1.1",
-    "typescript": "4.9.5"
+    "@cmssy/next": "file:vendor/cmssy-next-0.0.0.tgz",
+    "@cmssy/react": "file:vendor/cmssy-react-0.0.0.tgz",
+    "next": "^16.2.6",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
   },
   "devDependencies": {
-    "@next/eslint-plugin-next": "^13.2.4",
-    "@typescript-eslint/eslint-plugin": "^5.57.0",
-    "@typescript-eslint/parser": "^5.57.0",
-    "autoprefixer": "^10.4.14",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "postcss": "^8.4.21",
-    "prettier": "^2.8.7",
-    "tailwindcss": "^3.3.0"
+    "@types/node": "^25.9.1",
+    "@types/react": "^19.2.15",
+    "@types/react-dom": "^19.2.3",
+    "eslint": "^9.39.4",
+    "eslint-config-next": "^16.2.6",
+    "typescript": "^6.0.3"
   }
 }
