@@ -1,34 +1,5 @@
 import { CmssyPage } from "@cmssy/react";
-import Header from "@/components/blocks/header/Header";
-import Footer from "@/components/blocks/footer/Footer";
 import "@/cmssy/blocks";
-
-const header = {
-  brand: "Kancelaria Restrukturyzacje",
-  links: [
-    { label: "Specjalizacje", href: "#" },
-    { label: "Zespół Kancelarii", href: "#" },
-  ],
-  phones: [{ number: "+48 725 788 344" }, { number: "+48 791 080 431" }],
-  email: "biuro@kancelaria-restrukturyzacje.pl",
-};
-
-const footer = {
-  brand: "Kancelaria Restrukturyzacje",
-  tagline: "Twoi doradcy w kryzysie",
-  phones: [
-    { number: "+48 725 788 344" },
-    { number: "+48 791 080 431" },
-    { number: "+48 692 543 234" },
-  ],
-  email: "biuro@kancelaria-restrukturyzacje.pl",
-  address: "aleja Rzeczypospolitej 8 lok. 9, 80-369 Gdańsk",
-  addressNote:
-    "(spotkania po wcześniejszym telefonicznym umówieniu terminu wizyty)",
-  mapsHref: "#",
-  infoLinks: [{ label: "Polityka prywatności", href: "#" }],
-  copyright: "© 2026 Kancelaria Restrukturyzacje i Upadłości",
-};
 
 const IMG =
   "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=1600";
@@ -157,11 +128,5 @@ const page = {
 };
 
 export default function PreviewPage() {
-  return (
-    <>
-      <Header content={header} />
-      <CmssyPage page={page} locale="pl" defaultLocale="pl" />
-      <Footer content={footer} />
-    </>
-  );
+  return <CmssyPage page={page} locale="pl" defaultLocale="pl" />;
 }
