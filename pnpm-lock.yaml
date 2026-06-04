@@ -135,7 +135,7 @@ packages:
       react-dom: ^18.2.0 || ^19.0.0
 
   '@cmssy/react@file:vendor/cmssy-react-0.0.0.tgz':
-    resolution: {integrity: sha512-9yrTWOMA3Bu2Orj8KCFZuS9yPuaPJecqC6/4Kx8ZB+6b1bw5xZsLZ+rL5LZ2dYBlRSB4MGSpYawsqJrHRiIaKw==, tarball: file:vendor/cmssy-react-0.0.0.tgz}
+    resolution: {integrity: sha512-1IWi4Y5pcWjlzbwBZmMG/QWiDh+bfZ8HP40BPzR4oRadqDqONQSUhho2PY+OWi19SlcxWS0mOkokmY9eM3huFw==, tarball: file:vendor/cmssy-react-0.0.0.tgz}
     version: 0.0.0
     peerDependencies:
       react: ^18.2.0 || ^19.0.0

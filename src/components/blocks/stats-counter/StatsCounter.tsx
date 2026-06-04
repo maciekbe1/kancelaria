@@ -16,7 +16,6 @@ function CountUp({ value, suffix = "" }: { value: number; suffix?: string }) {
 
   useEffect(() => {
     if (!inView) return;
-    setDisplay(0);
     const controls = animate(0, value, {
       duration: 2,
       ease: "easeOut",
