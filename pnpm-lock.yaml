@@ -126,7 +126,7 @@ packages:
     engines: {node: '>=6.9.0'}
 
   '@cmssy/next@file:vendor/cmssy-next-0.0.0.tgz':
-    resolution: {integrity: sha512-jCAOOYVOdN4n/1Ov/vTs1MoiZJBBWwpCl3N1udLMN6G1trPW+Oq7YvlniMH/8M37ac1p8CSm6lvlHSMQ6C/DmQ==, tarball: file:vendor/cmssy-next-0.0.0.tgz}
+    resolution: {integrity: sha512-xDdWS/zRaum1UzGgHol2yvWSyqKi1hQWGQHZYk1K+FGCRI+7b12LirLn45C2ZTOuhRglc+7zRbKINM/+oxxr6A==, tarball: file:vendor/cmssy-next-0.0.0.tgz}
     version: 0.0.0
     peerDependencies:
       '@cmssy/react': '*'
@@ -135,7 +135,7 @@ packages:
       react-dom: ^18.2.0 || ^19.0.0
 
   '@cmssy/react@file:vendor/cmssy-react-0.0.0.tgz':
-    resolution: {integrity: sha512-DE1N0n3BdzERGyIkePuTueBj20MPq72sDbN3b+/jhSvsKg4BC/aS1Mi0tHU7IoWBlOZTfY9MyNfwHRtt0X4rog==, tarball: file:vendor/cmssy-react-0.0.0.tgz}
+    resolution: {integrity: sha512-eT9U/T2CPlSIitVPZTs8L/esn0ad/0C6J6f3M5Vw3he4JFLSpFiS6eSA2ethbKiOqdWQv3TPJWqvQXTUBjOteA==, tarball: file:vendor/cmssy-react-0.0.0.tgz}
     version: 0.0.0
     peerDependencies:
       react: ^18.2.0 || ^19.0.0

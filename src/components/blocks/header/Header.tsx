@@ -12,6 +12,7 @@ const tel = (n: string) => `tel:${n.replace(/\s+/g, "")}`;
 
 export default function Header({ content }: { content: BlockContent }) {
   const { brand = "Kancelaria Restrukturyzacje", email = "" } = content;
+  const logoUrl = (content as { logo?: string }).logo ?? "";
   const links = (content.links ?? []) as NavLink[];
   const phones = (content.phones ?? []) as Phone[];
 
@@ -23,11 +24,19 @@ export default function Header({ content }: { content: BlockContent }) {
 
   const logo = (
     <a href="/" className="logo">
-      <LogoMark />
-      <span className="logo-word">
-        {brandHead}
-        {brandTail ? <span className="logo-word-2"> {brandTail}</span> : null}
-      </span>
+      {logoUrl ? (
+        <img className="logo-img" src={logoUrl} alt={brand} />
+      ) : (
+        <>
+          <LogoMark />
+          <span className="logo-word">
+            {brandHead}
+            {brandTail ? (
+              <span className="logo-word-2"> {brandTail}</span>
+            ) : null}
+          </span>
+        </>
+      )}
     </a>
   );
 
