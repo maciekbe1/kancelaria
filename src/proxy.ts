@@ -10,8 +10,10 @@ export function proxy(request: NextRequest) {
   const editMode = isCmssyEditRequest(request);
 
   // Forward edit mode to server components (the root layout can't read
-  // searchParams) so layouts draft on the same signal as content.
+  // searchParams) so layouts draft on the same signal as content. Strip any
+  // inbound value first so a client can't forge the header.
   const requestHeaders = new Headers(request.headers);
+  requestHeaders.delete(CMSSY_EDIT_HEADER);
   if (editMode) requestHeaders.set(CMSSY_EDIT_HEADER, "1");
 
   const response = NextResponse.next({ request: { headers: requestHeaders } });
