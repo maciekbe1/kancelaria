@@ -1,4 +1,3 @@
-import { registerBlocks } from "@cmssy/react";
 import { heroBlock } from "@/components/blocks/hero/block";
 import { editorialIntroBlock } from "@/components/blocks/editorial-intro/block";
 import { contactCtaBlock } from "@/components/blocks/contact-cta/block";
@@ -11,19 +10,18 @@ import { statsCounterBlock } from "@/components/blocks/stats-counter/block";
 import { teamMemberBlock } from "@/components/blocks/team-member/block";
 import { teamPreviewBlock } from "@/components/blocks/team-preview/block";
 
-registerBlocks(
-  [
-    heroBlock,
-    editorialIntroBlock,
-    contactCtaBlock,
-    dossierSectionBlock,
-    footerBlock,
-    headerBlock,
-    pageHeroBlock,
-    paperCalloutBlock,
-    statsCounterBlock,
-    teamMemberBlock,
-    teamPreviewBlock,
-  ],
-  { category: "kancelaria" }
-);
+export const blocks = [
+  heroBlock,
+  editorialIntroBlock,
+  contactCtaBlock,
+  dossierSectionBlock,
+  footerBlock,
+  headerBlock,
+  pageHeroBlock,
+  paperCalloutBlock,
+  statsCounterBlock,
+  teamMemberBlock,
+  teamPreviewBlock,
+];
+
+export const blockCategory = "kancelaria";

@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
-import { fetchLayouts, type CmssyLayoutGroup } from "@cmssy/react";
-import { CmssyLayout } from "@cmssy/react/client";
+import {
+  fetchLayouts,
+  CmssyServerLayout,
+  type CmssyLayoutGroup,
+} from "@cmssy/react";
 import { isCmssyEditMode } from "@cmssy/next";
 import "./globals.css";
-import "@/cmssy/blocks";
-import { RegisterBlocks } from "@/cmssy/register-blocks";
+import { blocks } from "@/cmssy/blocks";
 import { cmssy } from "@/cmssy/config";
 
 export const metadata: Metadata = {
@@ -32,8 +34,9 @@ export default async function RootLayout({
   const groups = await getLayoutGroups();
   const locale = cmssy.defaultLocale;
   const slot = (position: "header" | "footer") => (
-    <CmssyLayout
+    <CmssyServerLayout
       groups={groups}
+      blocks={blocks}
       position={position}
       locale={locale}
       defaultLocale={locale}
@@ -42,7 +45,6 @@ export default async function RootLayout({
   return (
     <html lang="pl">
       <body>
-        <RegisterBlocks />
         {slot("header")}
         {children}
         {slot("footer")}
