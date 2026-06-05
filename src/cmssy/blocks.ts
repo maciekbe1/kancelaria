@@ -24,4 +24,4 @@ export const blocks = [
   teamPreviewBlock,
 ];
 
-export const blockCategory = "kancelaria";
+export const category = "kancelaria";
