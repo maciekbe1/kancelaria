@@ -8,13 +8,13 @@ import { isCmssyEditMode } from "@cmssy/next";
 import "./globals.css";
 import { blocks } from "@/cmssy/blocks";
 import { cmssy } from "@/cmssy/config";
+import { EditableLayout } from "@/cmssy/editable-layout";
 
 export const metadata: Metadata = {
   title: "Kancelaria Restrukturyzacje i Upadłości",
 };
 
-async function getLayoutGroups(): Promise<CmssyLayoutGroup[]> {
-  const editMode = await isCmssyEditMode();
+async function getLayoutGroups(editMode: boolean): Promise<CmssyLayoutGroup[]> {
   try {
     return await fetchLayouts(
       { apiUrl: cmssy.apiUrl, workspaceSlug: cmssy.workspaceSlug },
@@ -31,17 +31,32 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const groups = await getLayoutGroups();
+  const editMode = await isCmssyEditMode();
+  const groups = await getLayoutGroups(editMode);
   const locale = cmssy.defaultLocale;
-  const slot = (position: "header" | "footer") => (
-    <CmssyServerLayout
-      groups={groups}
-      blocks={blocks}
-      position={position}
-      locale={locale}
-      defaultLocale={locale}
-    />
-  );
+  const editorOrigin = Array.isArray(cmssy.editorOrigin)
+    ? cmssy.editorOrigin[0]
+    : cmssy.editorOrigin;
+
+  const slot = (position: "header" | "footer") =>
+    editMode ? (
+      <EditableLayout
+        groups={groups}
+        position={position}
+        locale={locale}
+        defaultLocale={locale}
+        edit={{ editorOrigin }}
+      />
+    ) : (
+      <CmssyServerLayout
+        groups={groups}
+        blocks={blocks}
+        position={position}
+        locale={locale}
+        defaultLocale={locale}
+      />
+    );
+
   return (
     <html lang="pl">
       <body>
