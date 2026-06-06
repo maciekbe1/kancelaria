@@ -126,7 +126,7 @@ packages:
     engines: {node: '>=6.9.0'}
 
   '@cmssy/next@file:vendor/cmssy-next-0.0.0.tgz':
-    resolution: {integrity: sha512-O5llTAejTIlFc3twoe5k8sF7IWM4QMKMzPgyQlb6sbn61qqp2sJ8YgMYOVpfe7TJvE6Ht0v7J5A8oh1QK872yQ==, tarball: file:vendor/cmssy-next-0.0.0.tgz}
+    resolution: {integrity: sha512-y4Dtr/KIHWDeoPHwTQNttz5UTrplusMtwrVuVirRvYJT4cRW6TrXtaq3TFeqDoqZMPL7s3Z5yl7f6eDZWMjd+A==, tarball: file:vendor/cmssy-next-0.0.0.tgz}
     version: 0.0.0
     peerDependencies:
       '@cmssy/react': '*'
@@ -135,7 +135,7 @@ packages:
       react-dom: ^18.2.0 || ^19.0.0
 
   '@cmssy/react@file:vendor/cmssy-react-0.0.0.tgz':
-    resolution: {integrity: sha512-keRDwM3Mt6/RUJbKa430PBMerHespjsp4iPgVa7Aa7G2KoMc+7oRyN0qoHztPik8YTVhI+aT23w6DFFepcvIew==, tarball: file:vendor/cmssy-react-0.0.0.tgz}
+    resolution: {integrity: sha512-9MvMIR1d0RmyFWMjuqdqyM0PmR2LkHosW3wgr9Id2d3kMuVdG3TPW/pCShJugcrOLOOdCd1hGAbn42P8loXzTg==, tarball: file:vendor/cmssy-react-0.0.0.tgz}
     version: 0.0.0
     peerDependencies:
       react: ^18.2.0 || ^19.0.0
@@ -838,8 +838,8 @@ packages:
     resolution: {integrity: sha512-BLrgEcRTwX2o6gGxGOCNyMvGSp35YofuYzw9h1IMTRmKqttAZZVU67bdb9Pr2vUHA8+j3i2tJfjO6C6+4myGTA==}
     engines: {node: 18 || 20 || >=22}
 
-  baseline-browser-mapping@2.10.33:
-    resolution: {integrity: sha512-bA6+tcSLpz2tIEdDXZPpPTIuxBcC4+w6SieaYyfigIa4h8GlFxbA17v22Vx3JUtuZQj9SgOsnbK+aTBzyDyEuw==}
+  baseline-browser-mapping@2.10.34:
+    resolution: {integrity: sha512-IMDedajPifLnHNY0X9n8hKxRTQ6/eTHwr5bDo04WnuqxyKw6LYtQywCuuqPZwhl3aBXMvQpJov42GLCwRRdQzw==}
     engines: {node: '>=6.0.0'}
     hasBin: true
 
@@ -960,14 +960,14 @@ packages:
     resolution: {integrity: sha512-KIN/nDJBQRcXw0MLVhZE9iQHmG68qAVIBg9CqmUYjmQIhgij9U5MFvrqkUL5FbtyyzZuOeOt0zdeRe4UY7ct+A==}
     engines: {node: '>= 0.4'}
 
-  electron-to-chromium@1.5.367:
-    resolution: {integrity: sha512-4Mk/mrynCNQ+atY40D3UpmhLWB6AHMbYMlIrPhHcMF6x0L7O0b052FCAsxw1LlaR++UFuNg3D/A6XCuGDa0guQ==}
+  electron-to-chromium@1.5.368:
+    resolution: {integrity: sha512-7RckJJK4uESJF9PxvfMWd3TGqIiieUTG4HxnKaKuIpGbcr+r2ZEB3g2gAhCP3Fqm42vJSzLfgab9eva/C4/XVw==}
 
   emoji-regex@9.2.2:
     resolution: {integrity: sha512-L18DaJsXSUk2+42pv8mLs5jJT2hqFkFE4j21wOmgbUqsZ2hL72NsUU785g9RXgo3s0ZNgVl42TiHp3ZtOv/Vyg==}
 
-  enhanced-resolve@5.22.2:
-    resolution: {integrity: sha512-0rxICaFZ7NQho/sHely2bvOPRP0Eu2B0NZ9zM54YvRvWMn7jfz3DmnOZDR9LlXDdDcqntAVc6Hfy4gr/tdH/Ag==}
+  enhanced-resolve@5.23.0:
+    resolution: {integrity: sha512-yJN/BOOLxcOW2aQgeif9mSnaUB8KtvmMMp56oA1kx1CRfBKbhZm2pJ+NBY+3eOboHxix8lfjWpHE0Ei5U8RbSA==}
     engines: {node: '>=10.13.0'}
 
   es-abstract@1.24.2:
@@ -2388,7 +2388,7 @@ snapshots:
   '@tailwindcss/node@4.3.0':
     dependencies:
       '@jridgewell/remapping': 2.3.5
-      enhanced-resolve: 5.22.2
+      enhanced-resolve: 5.23.0
       jiti: 2.7.0
       lightningcss: 1.32.0
       magic-string: 0.30.21
@@ -2742,7 +2742,7 @@ snapshots:
 
   balanced-match@4.0.4: {}
 
-  baseline-browser-mapping@2.10.33: {}
+  baseline-browser-mapping@2.10.34: {}
 
   brace-expansion@1.1.15:
     dependencies:
@@ -2759,9 +2759,9 @@ snapshots:
 
   browserslist@4.28.2:
     dependencies:
-      baseline-browser-mapping: 2.10.33
+      baseline-browser-mapping: 2.10.34
       caniuse-lite: 1.0.30001793
-      electron-to-chromium: 1.5.367
+      electron-to-chromium: 1.5.368
       node-releases: 2.0.47
       update-browserslist-db: 1.2.3(browserslist@4.28.2)
 
@@ -2865,11 +2865,11 @@ snapshots:
       es-errors: 1.3.0
       gopd: 1.2.0
 
-  electron-to-chromium@1.5.367: {}
+  electron-to-chromium@1.5.368: {}
 
   emoji-regex@9.2.2: {}
 
-  enhanced-resolve@5.22.2:
+  enhanced-resolve@5.23.0:
     dependencies:
       graceful-fs: 4.2.11
       tapable: 2.3.3
@@ -3623,7 +3623,7 @@ snapshots:
     dependencies:
       '@next/env': 16.2.7
       '@swc/helpers': 0.5.15
-      baseline-browser-mapping: 2.10.33
+      baseline-browser-mapping: 2.10.34
       caniuse-lite: 1.0.30001793
       postcss: 8.4.31
       react: 19.2.7
