@@ -6,4 +6,8 @@ export const cmssy: CmssyNextConfig = {
   draftSecret: process.env.CMSSY_DRAFT_SECRET ?? "",
   editorOrigin: process.env.CMSSY_EDITOR_ORIGIN ?? "",
   defaultLocale: "pl",
+  auth: {
+    modelSlug: process.env.CMSSY_AUTH_MODEL_SLUG ?? "",
+    sessionSecret: process.env.CMSSY_SESSION_SECRET ?? "",
+  },
 };
