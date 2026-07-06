@@ -34,9 +34,10 @@ export default async function RootLayout({
   const editMode = await isCmssyEditMode();
   const groups = await getLayoutGroups(editMode);
   const locale = cmssy.defaultLocale;
-  const editorOrigin = Array.isArray(cmssy.editorOrigin)
-    ? cmssy.editorOrigin[0]
-    : cmssy.editorOrigin;
+  const editorOrigin =
+    (Array.isArray(cmssy.editorOrigin)
+      ? cmssy.editorOrigin[0]
+      : cmssy.editorOrigin) ?? "";
 
   const slot = (position: "header" | "footer") =>
     editMode ? (

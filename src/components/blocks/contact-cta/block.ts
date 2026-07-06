@@ -7,12 +7,12 @@ export const contactCtaBlock = defineBlock({
   component: ContactCta,
   props: {
     variant: fields.select({ label: "Wariant", options: ["dark", "gold"] }),
-    eyebrow: fields.singleLine({ label: "Nadtytuł" }),
-    heading: fields.singleLine({ label: "Nagłówek" }),
-    subtext: fields.multiLine({ label: "Tekst" }),
-    primaryLabel: fields.singleLine({ label: "Przycisk główny - tekst" }),
+    eyebrow: fields.text({ label: "Nadtytuł" }),
+    heading: fields.text({ label: "Nagłówek" }),
+    subtext: fields.textarea({ label: "Tekst" }),
+    primaryLabel: fields.text({ label: "Przycisk główny - tekst" }),
     primaryHref: fields.link({ label: "Przycisk główny - link" }),
-    secondaryLabel: fields.singleLine({ label: "Przycisk drugi - tekst" }),
+    secondaryLabel: fields.text({ label: "Przycisk drugi - tekst" }),
     secondaryHref: fields.link({ label: "Przycisk drugi - link" }),
   },
 });

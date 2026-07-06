@@ -6,11 +6,11 @@ export const paperCalloutBlock = defineBlock({
   label: "Paper Callout",
   component: PaperCallout,
   props: {
-    salutation: fields.singleLine({ label: "Powitanie" }),
+    salutation: fields.text({ label: "Powitanie" }),
     body: fields.richText({ label: "Treść" }),
-    close: fields.singleLine({ label: "Zakończenie" }),
-    signTag: fields.singleLine({ label: "Podpis - etykieta" }),
-    signName: fields.singleLine({ label: "Podpis - nazwa" }),
+    close: fields.text({ label: "Zakończenie" }),
+    signTag: fields.text({ label: "Podpis - etykieta" }),
+    signName: fields.text({ label: "Podpis - nazwa" }),
   },
 });
 

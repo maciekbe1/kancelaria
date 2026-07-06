@@ -6,16 +6,16 @@ export const teamPreviewBlock = defineBlock({
   label: "Team Preview",
   component: TeamPreview,
   props: {
-    eyebrow: fields.singleLine({ label: "Nadtytuł" }),
-    heading: fields.singleLine({ label: "Nagłówek" }),
-    allLabel: fields.singleLine({ label: "Etykieta 'wszyscy'" }),
+    eyebrow: fields.text({ label: "Nadtytuł" }),
+    heading: fields.text({ label: "Nagłówek" }),
+    allLabel: fields.text({ label: "Etykieta 'wszyscy'" }),
     members: fields.repeater({
       label: "Członkowie",
       itemLabel: "{name}",
       addButtonLabel: "Dodaj osobę",
       itemSchema: {
-        name: fields.singleLine({ label: "Imię i nazwisko" }),
-        role: fields.singleLine({ label: "Stanowisko" }),
+        name: fields.text({ label: "Imię i nazwisko" }),
+        role: fields.text({ label: "Stanowisko" }),
         photo: fields.media({ label: "Zdjęcie" }),
         href: fields.link({ label: "Link" }),
       },

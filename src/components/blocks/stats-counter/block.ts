@@ -11,9 +11,9 @@ export const statsCounterBlock = defineBlock({
       itemLabel: "{label}",
       addButtonLabel: "Dodaj statystykę",
       itemSchema: {
-        value: fields.numeric({ label: "Wartość" }),
-        suffix: fields.singleLine({ label: "Suffix" }),
-        label: fields.singleLine({ label: "Etykieta" }),
+        value: fields.number({ label: "Wartość" }),
+        suffix: fields.text({ label: "Suffix" }),
+        label: fields.text({ label: "Etykieta" }),
       },
     }),
   },

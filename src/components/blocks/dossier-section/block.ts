@@ -6,11 +6,11 @@ export const dossierSectionBlock = defineBlock({
   label: "Dossier Section",
   component: DossierSection,
   props: {
-    number: fields.singleLine({ label: "Numer" }),
-    label: fields.singleLine({ label: "Etykieta" }),
-    heading: fields.singleLine({ label: "Nagłówek" }),
+    number: fields.text({ label: "Numer" }),
+    label: fields.text({ label: "Etykieta" }),
+    heading: fields.text({ label: "Nagłówek" }),
     body: fields.richText({ label: "Treść" }),
-    anchorId: fields.singleLine({ label: "ID kotwicy" }),
+    anchorId: fields.text({ label: "ID kotwicy" }),
     tint: fields.boolean({ label: "Tło tonowane" }),
   },
 });

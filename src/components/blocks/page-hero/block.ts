@@ -6,9 +6,9 @@ export const pageHeroBlock = defineBlock({
   label: "Page Hero",
   component: PageHero,
   props: {
-    eyebrow: fields.singleLine({ label: "Nadtytuł" }),
-    title: fields.singleLine({ label: "Tytuł" }),
-    lead: fields.multiLine({ label: "Lead" }),
+    eyebrow: fields.text({ label: "Nadtytuł" }),
+    title: fields.text({ label: "Tytuł" }),
+    lead: fields.textarea({ label: "Lead" }),
     image: fields.media({ label: "Obraz" }),
   },
 });

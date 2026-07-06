@@ -8,14 +8,14 @@ export const headerBlock = defineBlock({
   layoutPositions: ["header"],
   props: {
     logo: fields.media({ label: "Logo" }),
-    brand: fields.singleLine({ label: "Marka" }),
-    email: fields.singleLine({ label: "E-mail" }),
+    brand: fields.text({ label: "Marka" }),
+    email: fields.text({ label: "E-mail" }),
     links: fields.repeater({
       label: "Linki nawigacji",
       itemLabel: "{label}",
       addButtonLabel: "Dodaj link",
       itemSchema: {
-        label: fields.singleLine({ label: "Etykieta" }),
+        label: fields.text({ label: "Etykieta" }),
         href: fields.link({ label: "Link" }),
       },
     }),
@@ -23,7 +23,7 @@ export const headerBlock = defineBlock({
       label: "Telefony",
       itemLabel: "{number}",
       addButtonLabel: "Dodaj telefon",
-      itemSchema: { number: fields.singleLine({ label: "Numer" }) },
+      itemSchema: { number: fields.text({ label: "Numer" }) },
     }),
   },
 });

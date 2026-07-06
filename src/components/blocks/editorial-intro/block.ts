@@ -6,11 +6,11 @@ export const editorialIntroBlock = defineBlock({
   label: "Editorial Intro",
   component: EditorialIntro,
   props: {
-    kicker: fields.singleLine({ label: "Nadtytuł" }),
-    heading: fields.singleLine({ label: "Nagłówek" }),
+    kicker: fields.text({ label: "Nadtytuł" }),
+    heading: fields.text({ label: "Nagłówek" }),
     body: fields.richText({ label: "Treść" }),
     image: fields.media({ label: "Obraz" }),
-    ctaLabel: fields.singleLine({ label: "Tekst przycisku" }),
+    ctaLabel: fields.text({ label: "Tekst przycisku" }),
     ctaHref: fields.link({ label: "Link przycisku" }),
   },
 });

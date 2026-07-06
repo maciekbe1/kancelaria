@@ -6,14 +6,14 @@ export const teamMemberBlock = defineBlock({
   label: "Team Member",
   component: TeamMember,
   props: {
-    role: fields.singleLine({ label: "Stanowisko" }),
-    name: fields.singleLine({ label: "Imię i nazwisko" }),
+    role: fields.text({ label: "Stanowisko" }),
+    name: fields.text({ label: "Imię i nazwisko" }),
     bio: fields.richText({ label: "Bio" }),
     photo: fields.media({ label: "Zdjęcie" }),
-    phone: fields.singleLine({ label: "Telefon" }),
-    email: fields.singleLine({ label: "E-mail" }),
+    phone: fields.text({ label: "Telefon" }),
+    email: fields.text({ label: "E-mail" }),
     reverse: fields.boolean({ label: "Odwróć układ" }),
-    anchorId: fields.singleLine({ label: "ID kotwicy" }),
+    anchorId: fields.text({ label: "ID kotwicy" }),
   },
 });
 
