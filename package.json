@@ -12,8 +12,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@cmssy/next": "^0.14.0",
-    "@cmssy/react": "^0.14.0",
+    "@cmssy/next": "^0.17.1",
+    "@cmssy/react": "^0.17.1",
     "framer-motion": "^12.38.0",
     "next": "^16.2.6",
     "react": "^19.2.6",

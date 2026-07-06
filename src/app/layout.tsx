@@ -17,7 +17,11 @@ export const metadata: Metadata = {
 async function getLayoutGroups(editMode: boolean): Promise<CmssyLayoutGroup[]> {
   try {
     return await fetchLayouts(
-      { apiUrl: cmssy.apiUrl, workspaceSlug: cmssy.workspaceSlug },
+      {
+        apiUrl: cmssy.apiUrl,
+        org: cmssy.org,
+        workspaceSlug: cmssy.workspaceSlug,
+      },
       "/",
       { previewSecret: editMode ? cmssy.draftSecret : undefined }
     );
