@@ -4,7 +4,7 @@ import {
   CmssyServerLayout,
   type CmssyLayoutGroup,
 } from "@cmssy/react";
-import { isCmssyEditMode } from "@cmssy/next";
+import { isCmssyEditMode, resolveEditorOrigin } from "@cmssy/next";
 import "./globals.css";
 import { blocks } from "@/cmssy/blocks";
 import { cmssy } from "@/cmssy/config";
@@ -38,10 +38,7 @@ export default async function RootLayout({
   const editMode = await isCmssyEditMode();
   const groups = await getLayoutGroups(editMode);
   const locale = cmssy.defaultLocale;
-  const editorOrigin =
-    (Array.isArray(cmssy.editorOrigin)
-      ? cmssy.editorOrigin[0]
-      : cmssy.editorOrigin) ?? "";
+  const editorOrigin = resolveEditorOrigin(cmssy.editorOrigin);
 
   const slot = (position: "header" | "footer") =>
     editMode ? (
