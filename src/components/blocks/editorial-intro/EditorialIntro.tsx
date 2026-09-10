@@ -1,13 +1,16 @@
 import { Container } from "@/components/container";
 import { Reveal } from "@/components/reveal";
-import { BlockContent } from "./block";
+import type { BlockProps } from "@cmssy/react";
+import { editorialIntroProps } from "./block";
 
-export default function EditorialIntro({ content }: { content: BlockContent }) {
+export default function EditorialIntro({
+  content,
+}: BlockProps<typeof editorialIntroProps>) {
   const {
     kicker = "",
     heading = "",
     body = "",
-    image = "",
+    image,
     ctaLabel = "",
     ctaHref = "",
   } = content;
@@ -37,9 +40,9 @@ export default function EditorialIntro({ content }: { content: BlockContent }) {
                   </a>
                 ) : null}
               </Reveal>
-              {image ? (
+              {image?.url ? (
                 <Reveal delay={0.2} className="services-img">
-                  <img src={image} alt={heading} />
+                  <img src={image.url} alt={image.alt ?? heading} />
                 </Reveal>
               ) : null}
             </div>

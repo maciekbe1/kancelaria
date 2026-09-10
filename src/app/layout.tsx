@@ -1,10 +1,6 @@
 import type { Metadata } from "next";
-import {
-  fetchLayouts,
-  CmssyServerLayout,
-  type CmssyLayoutGroup,
-} from "@cmssy/react";
-import { isCmssyEditMode } from "@cmssy/next";
+import { resolveCmssyLayout } from "@cmssy/react";
+import { isCmssyEditMode } from "@cmssy/next/server";
 import "./globals.css";
 import { blocks } from "@/cmssy/blocks";
 import { cmssy } from "@/cmssy/config";
@@ -14,19 +10,18 @@ export const metadata: Metadata = {
   title: "Kancelaria Restrukturyzacje i Upadłości",
 };
 
-async function getLayoutGroups(editMode: boolean): Promise<CmssyLayoutGroup[]> {
+async function slot(region: "header" | "footer", editMode: boolean) {
   try {
-    return await fetchLayouts(
-      {
-        apiUrl: cmssy.apiUrl,
-        org: cmssy.org,
-        workspaceSlug: cmssy.workspaceSlug,
-      },
-      "/",
-      { previewSecret: editMode ? cmssy.draftSecret : undefined }
-    );
+    const { element } = await resolveCmssyLayout(cmssy, {
+      region,
+      blocks,
+      editMode,
+      path: [],
+      editable: EditableLayout,
+    });
+    return element;
   } catch {
-    return [];
+    return null;
   }
 }
 
@@ -36,38 +31,17 @@ export default async function RootLayout({
   children: React.ReactNode;
 }) {
   const editMode = await isCmssyEditMode();
-  const groups = await getLayoutGroups(editMode);
-  const locale = cmssy.defaultLocale;
-  const editorOrigin =
-    (Array.isArray(cmssy.editorOrigin)
-      ? cmssy.editorOrigin[0]
-      : cmssy.editorOrigin) ?? "";
-
-  const slot = (position: "header" | "footer") =>
-    editMode ? (
-      <EditableLayout
-        groups={groups}
-        position={position}
-        locale={locale}
-        defaultLocale={locale}
-        edit={{ editorOrigin }}
-      />
-    ) : (
-      <CmssyServerLayout
-        groups={groups}
-        blocks={blocks}
-        position={position}
-        locale={locale}
-        defaultLocale={locale}
-      />
-    );
+  const [header, footer] = await Promise.all([
+    slot("header", editMode),
+    slot("footer", editMode),
+  ]);
 
   return (
     <html lang="pl">
       <body>
-        {slot("header")}
+        {header}
         {children}
-        {slot("footer")}
+        {footer}
       </body>
     </html>
   );

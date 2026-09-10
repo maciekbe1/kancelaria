@@ -1,13 +1,16 @@
 import { Container } from "@/components/container";
 import { Reveal } from "@/components/reveal";
-import { BlockContent } from "./block";
+import type { BlockProps } from "@cmssy/react";
+import { teamMemberProps } from "./block";
 
-export default function TeamMember({ content }: { content: BlockContent }) {
+export default function TeamMember({
+  content,
+}: BlockProps<typeof teamMemberProps>) {
   const {
     role = "",
     name = "",
     bio = "",
-    photo = "",
+    photo,
     phone = "",
     email = "",
     reverse = false,
@@ -19,7 +22,9 @@ export default function TeamMember({ content }: { content: BlockContent }) {
       <Container>
         <Reveal className={`agent${reverse ? " agent--flip" : ""}`}>
           <div className="agent-photo">
-            {photo ? <img src={photo} alt={name} /> : null}
+            {photo?.url ? (
+              <img src={photo.url} alt={photo.alt ?? name} />
+            ) : null}
           </div>
           <div className="agent-content">
             {role ? <span className="agent-spec">{role}</span> : null}
@@ -30,7 +35,7 @@ export default function TeamMember({ content }: { content: BlockContent }) {
                 dangerouslySetInnerHTML={{ __html: bio }}
               />
             ) : null}
-            {(phone || email) ? (
+            {phone || email ? (
               <div className="agent-contact">
                 {phone ? (
                   <div className="agent-ct">

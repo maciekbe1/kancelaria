@@ -1,15 +1,23 @@
 import { Container } from "@/components/container";
 import { Reveal } from "@/components/reveal";
-import { BlockContent } from "./block";
+import type { BlockProps } from "@cmssy/react";
+import { pageHeroProps } from "./block";
 
-export default function PageHero({ content }: { content: BlockContent }) {
-  const { eyebrow = "", title = "", lead = "", image = "" } = content;
+export default function PageHero({
+  content,
+}: BlockProps<typeof pageHeroProps>) {
+  const { eyebrow = "", title = "", lead = "", image } = content;
 
   return (
     <section className="hero-band">
-      {image ? (
+      {image?.url ? (
         <>
-          <img className="hero-band-bg" src={image} alt="" aria-hidden="true" />
+          <img
+            className="hero-band-bg"
+            src={image.url}
+            alt=""
+            aria-hidden="true"
+          />
           <div className="hero-band-grad" />
         </>
       ) : null}

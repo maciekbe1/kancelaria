@@ -1,12 +1,13 @@
 import { Container } from "@/components/container";
 import { Reveal } from "@/components/reveal";
-import { BlockContent } from "./block";
+import type { BlockProps } from "@cmssy/react";
+import { teamPreviewProps } from "./block";
 
-type Member = { name: string; role?: string; photo?: string; href?: string };
-
-export default function TeamPreview({ content }: { content: BlockContent }) {
+export default function TeamPreview({
+  content,
+}: BlockProps<typeof teamPreviewProps>) {
   const { eyebrow = "", heading = "", allLabel = "" } = content;
-  const members = (content.members ?? []) as Member[];
+  const members = content.members ?? [];
 
   return (
     <section className="team-preview">
@@ -14,7 +15,9 @@ export default function TeamPreview({ content }: { content: BlockContent }) {
         <div className="sec-head">
           <div className="sec-head-meta">
             <span className="sec-head-num">—</span>
-            {eyebrow ? <span className="sec-head-kicker">{eyebrow}</span> : null}
+            {eyebrow ? (
+              <span className="sec-head-kicker">{eyebrow}</span>
+            ) : null}
           </div>
           <div className="sec-head-body">
             {heading ? (
@@ -29,7 +32,9 @@ export default function TeamPreview({ content }: { content: BlockContent }) {
           {members.map((m, i) => (
             <Reveal key={i} delay={0.1 * (i + 1)} className="team-mini">
               <div className="team-mini-photo">
-                {m.photo ? <img src={m.photo} alt={m.name} /> : null}
+                {m.photo?.url ? (
+                  <img src={m.photo.url} alt={m.photo.alt ?? m.name} />
+                ) : null}
               </div>
               {m.role ? <span className="team-mini-spec">{m.role}</span> : null}
               <h3 className="team-mini-name">{m.name}</h3>

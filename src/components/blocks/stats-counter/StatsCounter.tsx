@@ -4,9 +4,8 @@ import { animate, useInView } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
 import { Container } from "@/components/container";
 import { Reveal } from "@/components/reveal";
-import { BlockContent } from "./block";
-
-type Stat = { value: number; suffix?: string; label: string };
+import type { BlockProps } from "@cmssy/react";
+import { statsCounterProps } from "./block";
 
 function CountUp({ value, suffix = "" }: { value: number; suffix?: string }) {
   const ref = useRef<HTMLSpanElement>(null);
@@ -32,8 +31,12 @@ function CountUp({ value, suffix = "" }: { value: number; suffix?: string }) {
   );
 }
 
-export default function StatsCounter({ content }: { content: BlockContent }) {
-  const stats = (content.stats ?? []) as Stat[];
+export default function StatsCounter({
+  content,
+}: BlockProps<typeof statsCounterProps>) {
+  const stats = (content.stats ?? []).flatMap((s) =>
+    typeof s.value === "number" ? [{ ...s, value: s.value }] : []
+  );
 
   return (
     <section className="metrics">

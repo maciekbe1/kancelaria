@@ -1,24 +1,28 @@
 import { Container } from "@/components/container";
 import { Reveal } from "@/components/reveal";
-import { BlockContent } from "./block";
+import type { BlockProps } from "@cmssy/react";
+import { heroProps } from "./block";
 
-type IndexItem = { number: string; label: string; href?: string };
-
-export default function Hero({ content }: { content: BlockContent }) {
+export default function Hero({ content }: BlockProps<typeof heroProps>) {
   const {
     eyebrow = "",
     title = "",
     subtitle = "",
-    backgroundImage = "",
+    backgroundImage,
     indexLabel = "Specjalizacje",
   } = content;
-  const index = (content.index ?? []) as IndexItem[];
+  const index = content.index ?? [];
 
   return (
     <section className="hero">
-      {backgroundImage ? (
+      {backgroundImage?.url ? (
         <>
-          <img className="hero-bg" src={backgroundImage} alt="" aria-hidden="true" />
+          <img
+            className="hero-bg"
+            src={backgroundImage.url}
+            alt=""
+            aria-hidden="true"
+          />
           <div className="hero-grad" />
         </>
       ) : null}

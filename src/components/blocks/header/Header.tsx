@@ -3,18 +3,18 @@
 import { useState } from "react";
 import { Container } from "@/components/container";
 import { LogoMark } from "@/components/logo-mark";
-import { BlockContent } from "./block";
-
-type NavLink = { label: string; href: string };
-type Phone = { number: string };
+import type { BlockProps } from "@cmssy/react";
+import { headerProps } from "./block";
 
 const tel = (n: string) => `tel:${n.replace(/\s+/g, "")}`;
 
-export default function Header({ content }: { content: BlockContent }) {
+export default function Header({ content }: BlockProps<typeof headerProps>) {
   const { brand = "Kancelaria Restrukturyzacje", email = "" } = content;
-  const logoUrl = (content as { logo?: string }).logo ?? "";
-  const links = (content.links ?? []) as NavLink[];
-  const phones = (content.phones ?? []) as Phone[];
+  const logoUrl = content.logo?.url ?? "";
+  const links = content.links ?? [];
+  const phones = (content.phones ?? []).flatMap((p) =>
+    p.number ? [p.number] : []
+  );
 
   const [open, setOpen] = useState(false);
 
@@ -46,9 +46,9 @@ export default function Header({ content }: { content: BlockContent }) {
         <div className="topbar">
           <Container className="topbar-inner">
             <div className="topbar-phones">
-              {phones.map((p, i) => (
-                <a key={i} href={tel(p.number)}>
-                  {p.number}
+              {phones.map((number, i) => (
+                <a key={i} href={tel(number)}>
+                  {number}
                 </a>
               ))}
             </div>
@@ -111,9 +111,9 @@ export default function Header({ content }: { content: BlockContent }) {
               </a>
             ))}
             <div className="drawer-foot">
-              {phones.map((p, i) => (
-                <a key={i} href={tel(p.number)}>
-                  {p.number}
+              {phones.map((number, i) => (
+                <a key={i} href={tel(number)}>
+                  {number}
                 </a>
               ))}
               {email ? <a href={`mailto:${email}`}>{email}</a> : null}

@@ -1,8 +1,11 @@
 import { Container } from "@/components/container";
 import { Reveal } from "@/components/reveal";
-import { BlockContent } from "./block";
+import type { BlockProps } from "@cmssy/react";
+import { contactCtaProps } from "./block";
 
-export default function ContactCta({ content }: { content: BlockContent }) {
+export default function ContactCta({
+  content,
+}: BlockProps<typeof contactCtaProps>) {
   const {
     variant = "dark",
     eyebrow = "",
@@ -40,7 +43,9 @@ export default function ContactCta({ content }: { content: BlockContent }) {
             </span>
           ) : null}
           {heading ? (
-            <h2 className={`font-display-lg text-display-lg mb-8 ${headingClass}`}>
+            <h2
+              className={`font-display-lg text-display-lg mb-8 ${headingClass}`}
+            >
               {heading}
             </h2>
           ) : null}

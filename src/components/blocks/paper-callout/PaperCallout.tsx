@@ -1,8 +1,11 @@
 import { Container } from "@/components/container";
 import { Reveal } from "@/components/reveal";
-import { BlockContent } from "./block";
+import type { BlockProps } from "@cmssy/react";
+import { paperCalloutProps } from "./block";
 
-export default function PaperCallout({ content }: { content: BlockContent }) {
+export default function PaperCallout({
+  content,
+}: BlockProps<typeof paperCalloutProps>) {
   const {
     salutation = "",
     body = "",
@@ -25,7 +28,7 @@ export default function PaperCallout({ content }: { content: BlockContent }) {
             />
           ) : null}
           {close ? <p className="letter-close">{close}</p> : null}
-          {(signTag || signName) ? (
+          {signTag || signName ? (
             <div className="letter-sign">
               {signTag ? (
                 <span className="letter-sign-tag">{signTag}</span>

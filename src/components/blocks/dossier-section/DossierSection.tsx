@@ -1,8 +1,11 @@
 import { Container } from "@/components/container";
 import { Reveal } from "@/components/reveal";
-import { BlockContent } from "./block";
+import type { BlockProps } from "@cmssy/react";
+import { dossierSectionProps } from "./block";
 
-export default function DossierSection({ content }: { content: BlockContent }) {
+export default function DossierSection({
+  content,
+}: BlockProps<typeof dossierSectionProps>) {
   const { number = "", heading = "", body = "", anchorId = "" } = content;
 
   return (

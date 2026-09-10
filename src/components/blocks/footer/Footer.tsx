@@ -1,13 +1,11 @@
 import { Container } from "@/components/container";
 import { LogoMark } from "@/components/logo-mark";
-import { BlockContent } from "./block";
-
-type LinkItem = { label: string; href: string };
-type Phone = { number: string };
+import type { BlockProps } from "@cmssy/react";
+import { footerProps } from "./block";
 
 const tel = (n: string) => `tel:${n.replace(/\s+/g, "")}`;
 
-export default function Footer({ content }: { content: BlockContent }) {
+export default function Footer({ content }: BlockProps<typeof footerProps>) {
   const {
     brand = "Kancelaria Restrukturyzacje",
     tagline = "",
@@ -17,8 +15,10 @@ export default function Footer({ content }: { content: BlockContent }) {
     mapsHref = "",
     copyright = "",
   } = content;
-  const phones = (content.phones ?? []) as Phone[];
-  const infoLinks = (content.infoLinks ?? []) as LinkItem[];
+  const phones = (content.phones ?? []).flatMap((p) =>
+    p.number ? [p.number] : []
+  );
+  const infoLinks = content.infoLinks ?? [];
 
   const [brandHead, ...brandRest] = brand.split(" ");
   const brandTail = brandRest.join(" ");
@@ -44,9 +44,9 @@ export default function Footer({ content }: { content: BlockContent }) {
 
         <div className="footer-col">
           <div className="footer-h">Kontakt</div>
-          {phones.map((p, i) => (
-            <a key={i} href={tel(p.number)}>
-              {p.number}
+          {phones.map((number, i) => (
+            <a key={i} href={tel(number)}>
+              {number}
             </a>
           ))}
           {email ? <a href={`mailto:${email}`}>{email}</a> : null}
